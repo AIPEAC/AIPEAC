@@ -1,6 +1,6 @@
 ## Hi there 👋
 
-I’m Alp, a developer with expertise ranked from strongest to solid experience in:
+I’m Allen, an AI-focused developer, with experience building end-to-end applications using Flutter (client) and Rust (backend).
 
 ## My languages and tools
 - Dart (Flutter)
