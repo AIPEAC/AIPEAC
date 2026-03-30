@@ -13,6 +13,8 @@ I’m Alp, a developer with expertise ranked from strongest to solid experience 
 - SQL (T-SQL, PostgreSQL)
 - Java
   - [Building GUI internship management system](https://github.com/AIPEAC/SC2002-OOP)
+- Powershell
+- Bash
 
 ## Highlights:
 
@@ -21,8 +23,12 @@ I’m Alp, a developer with expertise ranked from strongest to solid experience 
 | **Draggable Range Selector** | ![Downloads](https://img.shields.io/pub/dm/draggable_range_selector?style=flat-square) | 
 
 ## Next steps 
-- 🔭 I’m currently working on building a backend Rust project & restructuring PredNet with Transformer core.
-- 🌱 I am currently learning Golang.
+- 🔭 I’m currently working on:
+  - Restructuring PredNet with Transformer integrated
+  - Building a backend Rust project.
+- 🌱 I am currently learning:
+  - Golang
+  - C#
 
 <!--
 **AIPEAC/AIPEAC** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
