@@ -9,14 +9,14 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 		- [Comparable-version-sync](https://pub.dev/packages/comparable_version_sync)
 - Python (PyTorch)
 	- I have rebuilt [PredNet with Pytorch](https://github.com/AIPEAC/PyTorch-PredNet)
-   	- I improved [Monte Carlo](https://github.com/AIPEAC/SC3000-AI/blob/main/README.md) algorithm using Python
+   	- I optimized [Monte Carlo](https://github.com/AIPEAC/SC3000-AI/blob/main/README.md) algorithm using Python to solve a maze
 - Rust
 - SQL (T-SQL, PostgreSQL)
 - Java
   - [GUI management system](https://github.com/AIPEAC/SC2002-OOP)
 - C++
-- Powershell
-- Bash
+- Shell Scripting
+	- Powershell, Bash
 
 ## Highlights:
 
