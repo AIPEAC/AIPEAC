@@ -3,20 +3,20 @@
 I’m Allen, an AI-focused developer. I am also interested in building end-to-end applications using Flutter (client) and Rust (backend).
 
 ## My languages and tools
-- Dart (Flutter)
+- **Dart (Flutter)**
 	- I have built and published 2 packages to pub.dev
 		- [Draggable-range-selector](https://pub.dev/packages/draggable_range_selector)
 		- [Comparable-version-sync](https://pub.dev/packages/comparable_version_sync)
-- Python (PyTorch)
+- **Python (PyTorch)**
 	- I have rebuilt [PredNet with Pytorch](https://github.com/AIPEAC/PyTorch-PredNet)
    	- I optimized [Monte Carlo](https://github.com/AIPEAC/SC3000-AI/blob/main/README.md) algorithm using Python to solve a maze
-- Rust
-- SQL (T-SQL, PostgreSQL)
-- Java
+- **Rust**
+- **SQL** (T-SQL, PostgreSQL)
+- **Java**
   - [GUI management system](https://github.com/AIPEAC/SC2002-OOP)
-- C++
-- Shell Scripting
-	- Powershell, Bash
+- **C++**
+- **Shell Scripting** (PowerShell, Bash)
+	
 
 ## Project Highlights:
 
