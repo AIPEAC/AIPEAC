@@ -12,7 +12,7 @@ I’m Allen, an AI-focused developer, with experience building end-to-end applic
 - Rust
 - SQL (T-SQL, PostgreSQL)
 - Java
-  - [Building GUI internship management system](https://github.com/AIPEAC/SC2002-OOP)
+  - [GUI management system](https://github.com/AIPEAC/SC2002-OOP)
 - C++
 - Powershell
 - Bash
