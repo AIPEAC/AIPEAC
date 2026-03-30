@@ -28,9 +28,9 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
   - Restructuring PredNet with Transformer integrated
   - Building a backend Rust project.
 - 🌱 I am currently learning:
+  - JavaScript + HTML + CSS
   - Golang
   - C#
-
 <!--
 **AIPEAC/AIPEAC** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
