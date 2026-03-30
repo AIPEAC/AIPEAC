@@ -6,7 +6,7 @@ I’m Alp, a developer with expertise ranked from strongest to solid experience 
 - Dart (Flutter)
 	- I have built and published 2 packages to pub.dev
 		- [draggable range selector](https://pub.dev/packages/draggable_range_selector)
-  			- With ![Downloads](https://img.shields.io/pub/dm/draggable_range_selector)
+  			- ![Downloads](https://img.shields.io/pub/dm/draggable_range_selector)
 		- [comparable version sync](https://pub.dev/packages/comparable_version_sync)
 - Python (PyTorch)
 	- I have rebuilt [PredNet with Pytorch](https://github.com/AIPEAC/PyTorch-PredNet)
