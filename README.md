@@ -18,7 +18,7 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 - Shell Scripting
 	- Powershell, Bash
 
-## Highlights:
+## Project Highlights:
 
 | Project | Highlights |
 | :--- | :--- | 
