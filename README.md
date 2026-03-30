@@ -1,6 +1,6 @@
 ## Hi there 👋
 
-I’m Allen, an AI-focused developer, with experience building end-to-end applications using Flutter (client) and Rust (backend).
+I’m Peac, an AI-focused developer, with experience building end-to-end applications using Flutter (client) and Rust (backend).
 
 ## My languages and tools
 - Dart (Flutter)
