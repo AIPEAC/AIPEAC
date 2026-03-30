@@ -12,12 +12,12 @@ I’m Alp, a developer with expertise ranked from strongest to solid experience 
 	- I have rebuilt [PredNet with Pytorch](https://github.com/AIPEAC/PyTorch-PredNet)
 - Rust
 - SQL (T-SQL, PostgreSQL)
-
 - Java
+  - [School Project](https://github.com/AIPEAC/SC2002-OOP)
 
 ## Next steps 
-- 🔭 I’m currently working on ...
-- 🌱 I am currently learning Go.
+- 🔭 I’m currently working on building a backend Rust project & restructuring PredNet with Transformer core.
+- 🌱 I am currently learning Golang.
 
 <!--
 **AIPEAC/AIPEAC** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
