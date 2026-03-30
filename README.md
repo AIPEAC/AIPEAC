@@ -5,8 +5,8 @@ I’m Alp, a developer with expertise ranked from strongest to solid experience 
 ## My languages and tools
 - Dart (Flutter)
 	- I have built and published 2 packages to pub.dev
-		- [draggable range selector](https://pub.dev/packages/draggable_range_selector)
-		- [comparable version sync](https://pub.dev/packages/comparable_version_sync)
+		- [Draggable-range-selector](https://pub.dev/packages/draggable_range_selector)
+		- [Comparable-version-sync](https://pub.dev/packages/comparable_version_sync)
 - Python (PyTorch)
 	- I have rebuilt [PredNet with Pytorch](https://github.com/AIPEAC/PyTorch-PredNet)
 - Rust
