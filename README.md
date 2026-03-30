@@ -9,6 +9,7 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 		- [Comparable-version-sync](https://pub.dev/packages/comparable_version_sync)
 - Python (PyTorch)
 	- I have rebuilt [PredNet with Pytorch](https://github.com/AIPEAC/PyTorch-PredNet)
+   	- I improved [Monte Carlo Reinforcement learning](https://github.com/AIPEAC/SC3000-AI/README.md)
 - Rust
 - SQL (T-SQL, PostgreSQL)
 - Java
