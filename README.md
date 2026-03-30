@@ -5,7 +5,7 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 ## My Languages and Tools
 
 - **Dart (Flutter)**
-    - Published 2 packages to pub.dev: [Draggable-range-selector](https://pub.dev/packages/draggable_range_selector) & [Comparable-version-sync](https://pub.dev/packages/comparable_version_sync)
+    - Published 2 packages to pub.dev: [Draggable-range-selector](https://github.com/AIPEAC/draggable-range-selector) & [Comparable-version-sync](https://github.com/AIPEAC/comparable-version-sync)
 - **Python (PyTorch)**
     * I have rebuilt [PredNet with PyTorch](https://github.com/AIPEAC/PyTorch-PredNet)
     * I optimized [Monte Carlo](https://github.com/AIPEAC/SC3000-AI/blob/main/README.md) algorithm to solve a maze
