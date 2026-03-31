@@ -9,7 +9,7 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 - **Dart (Flutter)**
     - I published 2 packages to pub.dev: [Draggable-range-selector](https://github.com/AIPEAC/draggable-range-selector) & [Comparable-version-sync](https://github.com/AIPEAC/comparable-version-sync)
 - **Rust** (Backend & Performance)
-- **SQL** (T-SQL, PostgreSQL)
+- **SQL** (T-SQL, PostgreSQL, SQLite)
 - **Java**
     * [GUI management system](https://github.com/AIPEAC/SC2002-OOP)
 - **C++**
