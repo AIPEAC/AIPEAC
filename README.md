@@ -5,7 +5,7 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 ## 📖 My Languages and Tools
 - **Python (PyTorch)**
     * I have rebuilt [PredNet with PyTorch](https://github.com/AIPEAC/PyTorch-PredNet)
-    * I optimized [Monte Carlo](https://github.com/AIPEAC/SC3000-AI/blob/main/README.md#notable-developments) algorithm to solve a  maze
+    * I optimized [Monte Carlo](https://github.com/AIPEAC/SC3000-AI/blob/main/README.md#notable-developments) algorithm to solve a maze
 - **Dart (Flutter)**
     - I published 2 packages to pub.dev: [Draggable-range-selector](https://github.com/AIPEAC/draggable-range-selector) & [Comparable-version-sync](https://github.com/AIPEAC/comparable-version-sync)
 - **Rust** (Backend & Performance)
@@ -15,10 +15,10 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 - **C++**
 - **Shell Scripting** (PowerShell, Bash)
 
-## 💾 My Knowledge Base
-- AI archetures
-   - Transformer: What [self-attention and KQV](AI_architectures/Transformer.md) actually is doing.
-   - PredNet: [Demostration on PredNet Strcuture.](https://github.com/AIPEAC/PredNet-with-Transformer/blob/main/_docs/Original_Prenet_Design.pdf)
+## 🧠 My Knowledge Base
+- **AI Architectures**
+    - **Transformer:** Deep dive into the maths behind [Self-attention and Key, Query, Value](AI_architectures/Transformer.md) interactions.
+    - **PredNet:** Detailed demonstration and analysis of [PredNet Structure](https://github.com/AIPEAC/PredNet-with-Transformer/blob/main/_docs/Original_Prenet_Design.pdf).
 
 ## 🏆 Project Highlights
 
@@ -28,13 +28,8 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 
 ## 🚀 Next Steps
 - 🔭 **Currently working on:**
- 	* Restructuring PredNet with Transformer integration.
+    * Restructuring PredNet with Transformer integration.
     * Building a Rust backend project.
 - 🌱 **Currently learning:** JavaScript/HTML/CSS, Golang, and C#.
-<!-- 
-| **PredNet PyTorch** | ![Stars](https://img.shields.io/github/stars/AIPEAC/PyTorch-PredNet?style=flat-square) | [View Repo](https://github.com/AIPEAC/PyTorch-PredNet) |
-->
-
-
 
 ---
