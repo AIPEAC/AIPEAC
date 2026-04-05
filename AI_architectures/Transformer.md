@@ -1,4 +1,4 @@
-## Self-Attention and Transformer Decoder
+## Self-Attention, K,Q,V, and Transformer Decoder
 
 ### 1. The Q-K Duality: Symmetry and Efficiency
 While $Q$ and $K$ are conceptually different (Searcher vs. Index), they are mathematically symmetric. If you were to swap the weight matrices $W^Q$ and $W^K$ and transpose the resulting attention matrix, the network's expressive power remains identical.
