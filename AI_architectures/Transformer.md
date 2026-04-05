@@ -27,8 +27,8 @@ Instead of performing a single attention function, we project the queries, keys,
 $$\text{Head}_i = \text{Attention}(XW_i^Q, XW_i^K, XW_i^V)$$
 $$\text{MultiHead}(X) = \text{Concat}(\text{Head}_1, \dots, \text{Head}_h)W^O$$
 
-**Parameter Settings:**
-Typically, $d_v = d_k = d_{model} / h$.
+**Typical Parameter Settings:**
+* $d_v = d_k = \frac{d_{model}}{h}$
 * $W^O \in \mathbb{R}^{hd_k \times d_{model}}$
 
 ---
