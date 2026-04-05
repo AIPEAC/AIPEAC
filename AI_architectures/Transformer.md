@@ -9,7 +9,7 @@
 ### Single-Head Attention
 The result reflects the relativity within the input sequence.
 
-$$R = \text{Softmax}(QK^T / \sqrt{d_k}) V$$
+$$R = \alpha V = \sigma \left( \frac{QK^T}{\sqrt{d_k}} \right) V$$
 
 **Linear Projections:**
 * $Q = X W^Q$
