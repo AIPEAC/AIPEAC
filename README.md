@@ -2,7 +2,7 @@
 
 I’m Allen, an AI-focused developer. I am also interested in building end-to-end applications using Flutter (client) and Rust (backend).
 
-## My Languages and Tools
+## 📖 My Languages and Tools
 - **Python (PyTorch)**
     * I have rebuilt [PredNet with PyTorch](https://github.com/AIPEAC/PyTorch-PredNet)
     * I optimized [Monte Carlo](https://github.com/AIPEAC/SC3000-AI/blob/main/README.md#notable-developments) algorithm to solve a  maze
@@ -15,10 +15,10 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 - **C++**
 - **Shell Scripting** (PowerShell, Bash)
 
-## My Knowledge Base
+## 💾 My Knowledge Base
 - AI archetures
-   - Transformer: What attention KQV actually is doing.
-   - PredNet
+   - Transformer: What [self-attention and KQV](AI_architectures/Transformer.md) actually is doing.
+   - PredNet: [Demostration on PredNet Strcuture.](https://github.com/AIPEAC/PredNet-with-Transformer/blob/main/_docs/Original_Prenet_Design.pdf)
 
 ## 🏆 Project Highlights
 
