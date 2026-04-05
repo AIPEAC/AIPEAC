@@ -1,42 +1,68 @@
 ## Self-Attention, K,Q,V, and Transformer Decoder
+- Apr 5th, 2026
+---
 
-### 1. The Q-K Duality: Symmetry and Efficiency
-While $Q$ and $K$ are conceptually different (Searcher vs. Index), they are mathematically symmetric. If you were to swap the weight matrices $W^Q$ and $W^K$ and transpose the resulting attention matrix, the network's expressive power remains identical.
+# Transformer.md
 
-**Why distinguish them?**
-* **Computational Efficiency:** By projecting $X$ into lower-dimensional $d_k$ spaces, we significantly reduce the cost of the dot-product $QK^T$ compared to operating on the full input dimension.
-* **Role Specialization:** Although they *could* swap, the training process forces them into a fixed "Lock and Key" relationship to minimize the objective function.
+## 1. Multi-Head Attention Mechanism
+
+### Single-Head Attention
+The result reflects the relativity within the input sequence.
+
+$$R = \text{Softmax}(QK^T / \sqrt{d_k}) V$$
+
+**Linear Projections:**
+* $Q = X W^Q$
+* $K = X W^K$
+* $V = X W^V$
+
+**Dimensions:**
+* $X \in \mathbb{R}^{n \times d_{model}}$ (Input tensor: word number $\times$ embedding dim)
+* $W^Q, W^K \in \mathbb{R}^{d_{model} \times d_k}$
+* $W^V \in \mathbb{R}^{d_{model} \times d_v}$
+
+### Multi-Head Attention
+Instead of performing a single attention function, we project the queries, keys, and values $h$ times with different, learned linear projections.
+
+$$\text{Head}_i = \text{Attention}(XW_i^Q, XW_i^K, XW_i^V)$$
+$$\text{MultiHead}(X) = \text{Concat}(\text{Head}_1, \dots, \text{Head}_h)W^O$$
+
+**Parameter Settings:**
+Typically, $d_v = d_k = d_{model} / h$.
+* $W^O \in \mathbb{R}^{hd_k \times d_{model}}$
 
 ---
 
-### 2. The Gradient Intuition
-The backpropagation process "breaks" the initial symmetry. The weight updates are driven by the following gradients:
+## 2. Symmetry and Role Specialization (Q & K)
+
+### The Symmetry Property
+Mathematically, $Q$ and $K$ are symmetric in the dot-product $QK^T$. If you swap $W^Q$ and $W^K$ and transpose the attention matrix, the final result remains identical.
+* **Primary Purpose:** The split into $Q$ and $K$ is mainly to **reduce dimensionality** and **computational complexity** while allowing the model to learn complex relationships.
+
+### Breaking Symmetry via Backpropagation (Nabla Intuition)
+Despite the mathematical symmetry, the training process forces them into distinct roles ("The Searcher" vs "The Index") via gradient signals:
 
 $$\nabla_{W^Q} L = X^T (\dots) K$$
 $$\nabla_{W^K} L = X^T (\dots)^T Q$$
 
-**Key Insight:**
-* **$W^Q$** learns by looking at $K$. It adjusts to find the right "tags."
-* **$W^K$** learns by looking at $Q$. It adjusts to be "found" by the right queries.
-* The **Value ($V$)** acts as the anchor; $Q$ and $K$ must coordinate their symmetry to successfully extract the correct information from $V$.
+* **$W^Q$ Gradient:** Driven by how well it finds the relevant $K$.
+* **$W^K$ Gradient:** Driven by how well it responds to the relevant $Q$.
+* **The Anchor ($V$):** Since the output is weighted on $V$, $Q$ and $K$ must evolve as a "Lock and Key" pair to extract the most useful values for the task.
 
 ---
 
-### 3. Decoder Architecture
-The Decoder is designed for **Generation**. Unlike the Encoder, it is "Autoregressive," meaning it uses previously generated tokens to predict the next one.
+## 3. Transformer Decoder Architecture
+The Decoder is built for **Autoregressive Generation**, introducing two key modifications.
 
-#### A. Masked Multi-Head Attention
-* **The Constraint:** In the decoder, a token should not be able to "see" future tokens.
-* **The Mechanism:** We apply a **Mask** (setting future values to $-\infty$ before Softmax) to the $QK^T$ matrix. This ensures $z_i$ only depends on $x_{1 \dots i}$.
+### A. Masked Multi-Head Attention
+* **Mechanism:** A mask is applied to the $QK^T$ scores (setting future positions to $-\infty$) before Softmax.
+* **Effect:** Position $i$ can only attend to positions $1, \dots, i$.
 
+### B. Encoder-Decoder Attention (Cross-Attention)
+* **Query ($Q$):** Comes from the previous layer of the **Decoder**.
+* **Key ($K$) & Value ($V$):** Come from the final output of the **Encoder**.
 
-#### B. Encoder-Decoder Attention (Cross-Attention)
-* **The Bridge:** This layer allows the decoder to focus on the input sequence.
-* **The Source:** * **$Q$** comes from the Decoder's previous layer (What am I looking for in the source text?).
-    * **$K$ and $V$** come from the Encoder's final output (Here is the source information).
-
-
-#### C. Feed-Forward Network (FFN)
-* **The Function:** A position-wise transformation applied to each token independently.
+### C. Feed-Forward Network (FFN)
+Applied after attention to process the integrated information.
 $$\text{FFN}(x) = \text{Activation}(xW_1 + b_1)W_2 + b_2$$
-* It processes the information gathered by the attention layers, acting as the model's "knowledge storage."
+It acts as the "knowledge processor," refining the representation of each token independently.
