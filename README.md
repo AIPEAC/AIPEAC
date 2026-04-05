@@ -15,7 +15,7 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 - **C++**
 - **Shell Scripting** (PowerShell, Bash)
 
-## 🧠 My Knowledge Base - Notes
+## 🧠 My Knowledge Base - Notes and Docs
 - **AI Architectures**
     - **Transformer:** Maths behind [Self-attention and Key, Query, Value](AI_architectures/Transformer.md) interactions.
     - **PredNet:** Detailed demonstration and analysis of [PredNet Structure](https://github.com/AIPEAC/PredNet-with-Transformer/blob/main/_docs/Original_Prenet_Design.pdf).
