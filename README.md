@@ -2,11 +2,6 @@
 
 I’m Allen, an AI-focused developer. I am also interested in building end-to-end applications using Flutter (client) and Rust (backend).
 
-## My Knowledge Base
-- AI archetures
-   - Transformer
-   - PredNet
-
 ## My Languages and Tools
 - **Python (PyTorch)**
     * I have rebuilt [PredNet with PyTorch](https://github.com/AIPEAC/PyTorch-PredNet)
@@ -19,6 +14,11 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
     * [GUI management system](https://github.com/AIPEAC/SC2002-OOP)
 - **C++**
 - **Shell Scripting** (PowerShell, Bash)
+
+## My Knowledge Base
+- AI archetures
+   - Transformer: What attention KQV actually is doing.
+   - PredNet
 
 ## 🏆 Project Highlights
 
