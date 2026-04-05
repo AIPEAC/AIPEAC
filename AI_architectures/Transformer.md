@@ -9,7 +9,7 @@ While $Q$ and $K$ are conceptually different (Searcher vs. Index), they are math
 
 ---
 
-### 2. The Gradient Intuition (Nabla Notation)
+### 2. The Gradient Intuition
 The backpropagation process "breaks" the initial symmetry. The weight updates are driven by the following gradients:
 
 $$\nabla_{W^Q} L = X^T (\dots) K$$
