@@ -17,7 +17,7 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 
 ## 🧠 My Knowledge Base
 - **AI Architectures**
-    - **Transformer:** Deep dive into the maths behind [Self-attention and Key, Query, Value](AI_architectures/Transformer.md) interactions.
+    - **Transformer:** Maths behind [Self-attention and Key, Query, Value](AI_architectures/Transformer.md) interactions.
     - **PredNet:** Detailed demonstration and analysis of [PredNet Structure](https://github.com/AIPEAC/PredNet-with-Transformer/blob/main/_docs/Original_Prenet_Design.pdf).
 
 ## 🏆 Project Highlights
