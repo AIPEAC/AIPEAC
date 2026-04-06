@@ -20,7 +20,7 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
     - **Transformer:** Maths behind [Self-attention and Key, Query, Value](AI_architectures/Transformer.md) interactions.
     - **PredNet:** Detailed demonstration and analysis of [PredNet Structure](https://github.com/AIPEAC/PredNet-with-Transformer/blob/main/_docs/Original_Prenet_Design.pdf).
 - **Computer Security**
-  - **OGNL injection:** Analysis of the underlying mechanics of [OGNL injection](https://github.com/AIPEAC/SC3010-Computer-Security/blob/main/_note/OGNL-injection-introduction.md) attacks.
+  - **OGNL injection:** Analysis of the underlying mechanics of [OGNL injection](https://github.com/AIPEAC/SC3010-Computer-Security/) attacks.
 
 ## 🏆 Project Highlights
 
