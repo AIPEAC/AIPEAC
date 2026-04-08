@@ -2,3 +2,6 @@
 *.md linguist-documentation=false
 *.md linguist-vendored=false
 *.md linguist-generated=false
+
+*.gitattributes linguist-detectable=true
+*.gitattributes linguist-documentation=false
