@@ -5,3 +5,5 @@
 
 *.gitattributes linguist-detectable=true
 *.gitattributes linguist-documentation=false
+*.gitattributes  linguist-vendored=false
+*.gitattributes  linguist-generated=false
