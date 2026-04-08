@@ -5,13 +5,13 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 ## 📖 My Languages and Tools
 - **Python (PyTorch)**
     * I have rebuilt [PredNet with PyTorch](https://github.com/AIPEAC/PyTorch-PredNet)
-    * I optimized [Monte Carlo](https://github.com/AIPEAC/SC3000-AI/blob/main/README.md#notable-developments) algorithm to solve a maze
+    * I optimized [Monte Carlo](https://github.com/AIPEACS/SC3000-AI/blob/main/README.md#notable-developments) algorithm to solve a maze
 - **Dart (Flutter)**
     - I published 2 packages to pub.dev: [Draggable-range-selector](https://github.com/AIPEAC/draggable-range-selector) & [Comparable-version-sync](https://github.com/AIPEAC/comparable-version-sync)
 - **Rust** (Backend & Performance)
 - **SQL** (T-SQL, PostgreSQL, SQLite)
 - **Java**
-    * [GUI management system](https://github.com/AIPEAC/SC2002-OOP)
+    * [GUI management system](https://github.com/AIPEACS/SC2002-OOP)
 - **C++**
 - **Shell Scripting** (PowerShell, Bash)
 
@@ -20,7 +20,7 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
     - **Transformer:** Maths behind [Self-attention and Key, Query, Value](AI_architectures/Transformer.md) interactions.
     - **PredNet:** Detailed demonstration and analysis of [PredNet Structure](https://github.com/AIPEAC/PredNet-with-Transformer/blob/main/_docs/Original_Prenet_Design.pdf).
 - **Computer Security**
-  - **OGNL injection:** Analysis of the underlying mechanics of [OGNL injection](https://github.com/AIPEAC/SC3010-Computer-Security/) attacks.
+  - **OGNL injection:** Analysis of the underlying mechanics of [OGNL injection](https://github.com/AIPEACS/SC3010-Computer-Security/) attacks.
 
 
 
