@@ -22,12 +22,6 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 - **Computer Security**
   - **OGNL injection:** Analysis of the underlying mechanics of [OGNL injection](https://github.com/AIPEAC/SC3010-Computer-Security/) attacks.
 
-## 🏆 Project Highlights
-
-| Project | Status/Stats | Link |
-| :--- | :--- | :--- |
-| **Draggable Range Selector** | ![Downloads](https://camo.githubusercontent.com/04fdbe3a7c04b0e194d2c9defb596f6916ba47d7f405a1b3e84d8e8cf923dc18/68747470733a2f2f696d672e736869656c64732e696f2f7075622f646d2f647261676761626c655f72616e67655f73656c6563746f723f7374796c653d666c61742d737175617265) | [View on pub.dev](https://pub.dev/packages/draggable_range_selector) |
-
 ## 🚀 Next Steps
 - 🔭 **Currently working on:**
     * Restructuring PredNet with Transformer integration.
@@ -35,3 +29,9 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 - 🌱 **Currently learning:** JavaScript/HTML/CSS, Golang, and C#.
 
 ---
+<!--
+## 🏆 Project Highlights
+
+| Project | Status/Stats | Link |
+| :--- | :--- | :--- |
+| **Draggable Range Selector** | ![Downloads](https://camo.githubusercontent.com/04fdbe3a7c04b0e194d2c9defb596f6916ba47d7f405a1b3e84d8e8cf923dc18/68747470733a2f2f696d672e736869656c64732e696f2f7075622f646d2f647261676761626c655f72616e67655f73656c6563746f723f7374796c653d666c61742d737175617265) | [View on pub.dev](https://pub.dev/packages/draggable_range_selector) |
