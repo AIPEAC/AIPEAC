@@ -22,6 +22,8 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 - **Computer Security**
   - **OGNL injection:** Analysis of the underlying mechanics of [OGNL injection](https://github.com/AIPEAC/SC3010-Computer-Security/) attacks.
 
+---
+
 ## 🚀 Next Steps
 - 🔭 **Currently working on:**
     * Restructuring PredNet with Transformer integration.
