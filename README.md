@@ -37,12 +37,11 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
     * Restructuring PredNet with Transformer integration.
     * Building a Rust backend project.
 - 🌱 **Currently learning:**
-
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=go,cs,zig" height="40"/>
-  </a>
-</p>
+         <p align="left">
+           <a href="https://skillicons.dev">
+             <img src="https://skillicons.dev/icons?i=go,cs,zig" height="40"/>
+           </a>
+         </p>
 
 
 <!--
