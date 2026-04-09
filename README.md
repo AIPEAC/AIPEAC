@@ -6,10 +6,10 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 
 | Category | Icons |
 | :--- | :--- | 
-| **Core Development** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=pytorch,flutter,rust" /></a> |
-| **Languages** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=py,dart,js,html,css,c,cpp,java,verilog" /></a> |
-| **DevOps & Databases** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=git,github,linux,docker,sqlite,postgres,powershell,bash" /></a> |
-| **System & IDEs** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=debian,windows,vscode" /></a> |
+| **Core Development** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=pytorch,flutter,rust" height="40"/></a> |
+| **Languages** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=py,dart,js,html,css,c,cpp,java,verilog" height="40"/></a> |
+| **DevOps & Databases** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=git,github,linux,docker,sqlite,postgres,powershell,bash" height="40"/></a> |
+| **System & IDEs** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=debian,windows,vscode" height="40"/></a> |
 
 - **Python (PyTorch)**
     * I have rebuilt [PredNet with PyTorch](https://github.com/AIPEAC/PyTorch-PredNet)
@@ -37,7 +37,7 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=go,cs,zig" />
+    <img src="https://skillicons.dev/icons?i=go,cs,zig" height="40"/>
   </a>
 </p>
 
@@ -51,8 +51,8 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 
 | Category | Icons |
 | :--- | :--- | 
-| **Core Tech** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=pytorch,flutter,rust" /></a> |
-| **Frameworks** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=vue,express,tailwind" /></a> |
-| **Languages** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=py,dart,js,html,css,c,cpp,java,verilog" /></a> |
-| **DevOps & DB** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=git,github,linux,docker,sqlite,postgres" /></a> |
-| **System & IDE** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=debian,windows,vscode,powershell,bash" /></a> |
+| **Core Tech** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=pytorch,flutter,rust" height="40"/></a> |
+| **Frameworks** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=vue,express,tailwind" height="40"/></a> |
+| **Languages** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=py,dart,js,html,css,c,cpp,java,verilog" height="40"/></a> |
+| **DevOps & DB** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=git,github,linux,docker,sqlite,postgres" height="40"/></a> |
+| **System & IDE** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=debian,windows,vscode,powershell,bash" height="40"/></a> |
