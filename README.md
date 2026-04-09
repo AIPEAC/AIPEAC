@@ -1,6 +1,6 @@
 ## Hi there 👋
 
-I’m Allen, an AI-focused developer. I am also interested in building end-to-end applications using Flutter (client) and Rust (backend).
+I’m Allen, an AI-focused developer. I am also interested in building end-to-end applications using Flutter (client) and Rust (backend). 
 
 ## 📖 My Languages and Tools
 
