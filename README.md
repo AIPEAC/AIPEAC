@@ -24,7 +24,6 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
     - I recreated [CVE-2017-5638](https://github.com/AIPEACS/SC3010-Computer-Security), using PowerShell and Java (Struts2)
 
 
-
 ## 🧠 My Knowledge Base - Notes and Docs
 - **AI Architectures**
     - **Transformer:** Maths behind [Self-attention and Key, Query, Value](AI_architectures/Transformer.md) interactions.
