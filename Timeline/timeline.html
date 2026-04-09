@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Allen's Timeline</title>
+  <style>
+    :root {
+      --bg:       #0d1117;
+      --surface:  #161b22;
+      --border:   #30363d;
+      --text:     #e6edf3;
+      --muted:    #8b949e;
+      --accent:   #58a6ff;
+      --green:    #3fb950;
+      --orange:   #f0883e;
+      --purple:   #bc8cff;
+      --red:      #f85149;
+      --teal:     #39d353;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      padding: 0 20px 100px;
+    }
+
+    /* ── Header ── */
+    .page-header {
+      text-align: center;
+      padding: 60px 0 70px;
+    }
+    .page-header h1 {
+      font-size: 2rem;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+    .page-header p {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* ── Timeline wrapper ── */
+    .timeline {
+      position: relative;
+      max-width: 860px;
+      margin: 0 auto;
+
+      /* The vertical spine */
+      --spine-left: 50%;
+    }
+
+    /* Spine line */
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 0; bottom: 0;
+      left: var(--spine-left);
+      width: 2px;
+      background: var(--border);
+      transform: translateX(-50%);
+    }
+
+    /* ↑ Arrow at the very top */
+    .timeline-arrow {
+      position: absolute;
+      top: -22px;
+      left: var(--spine-left);
+      transform: translateX(-50%);
+      width: 0; height: 0;
+      border-left:  7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 18px solid var(--accent);
+    }
+
+    /* ── Individual items ── */
+    /*
+      HOW TO ADD A NEW ITEM
+      ─────────────────────
+      Copy one of the blocks below and paste it ABOVE the existing ones
+      (newest items go at the top).
+
+      Use  class="timeline-item right"  →  content on the RIGHT side
+      Use  class="timeline-item left"   →  content on the LEFT side
+
+      Change the dot colour with  style="--dot: #yourcolor"
+      Pick a tag class: .tag-current  .tag-ai  .tag-web
+                        .tag-security .tag-mobile .tag-systems .tag-docs
+    */
+    .timeline-item {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 44px;
+      /* Entrance animation (JS adds .visible) */
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.45s ease, transform 0.45s ease;
+    }
+    .timeline-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Dot on the spine */
+    .timeline-dot {
+      --dot: var(--accent);
+      position: absolute;
+      left: var(--spine-left);
+      top: 18px;
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      background: var(--dot);
+      border: 2px solid var(--bg);
+      transform: translateX(-50%);
+      z-index: 1;
+      transition: transform 0.2s;
+    }
+    .timeline-item:hover .timeline-dot { transform: translateX(-50%) scale(1.35); }
+
+    /* Content card */
+    .timeline-content {
+      width: calc(50% - 42px);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 20px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .timeline-content:hover {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px var(--accent)22;
+    }
+
+    /* RIGHT side: card sits to the right of the spine */
+    .timeline-item.right .timeline-content { margin-left: calc(50% + 30px); }
+
+    /* LEFT side: card sits to the left of the spine */
+    .timeline-item.left  .timeline-content { margin-right: calc(50% + 30px); text-align: right; }
+
+    /* Connector line (card → dot) */
+    .timeline-content::before {
+      content: "";
+      position: absolute;
+      top: 25px;
+      height: 2px;
+      width: 30px;
+      background: var(--border);
+    }
+    .timeline-item.right .timeline-content::before { left: calc(50% - 30px); }
+    .timeline-item.left  .timeline-content::before { right: calc(50% - 30px); }
+
+    /* ── Tags ── */
+    .tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      padding: 2px 9px;
+      border-radius: 20px;
+      margin-bottom: 9px;
+    }
+    .tag-current  { background: rgba(63,185,80,.18);  color: var(--green);  }
+    .tag-ai       { background: rgba(88,166,255,.18); color: var(--accent); }
+    .tag-web      { background: rgba(240,136,62,.18); color: var(--orange); }
+    .tag-security { background: rgba(188,140,255,.18);color: var(--purple); }
+    .tag-mobile   { background: rgba(57,211,83,.15);  color: var(--teal);   }
+    .tag-systems  { background: rgba(248,81,73,.15);  color: var(--red);    }
+    .tag-docs     { background: rgba(139,148,158,.15);color: var(--muted);  }
+
+    .timeline-content h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .timeline-content p {
+      font-size: 0.84rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .timeline-content a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .timeline-content a:hover { text-decoration: underline; }
+
+    .timeline-date {
+      margin-top: 10px;
+      font-size: 0.74rem;
+      color: var(--muted);
+      opacity: 0.6;
+    }
+
+    /* ── Year separator ── */
+    .timeline-year {
+      position: relative;
+      margin: 68px 0 48px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.45s ease 0.1s, transform 0.45s ease 0.1s;
+    }
+    .timeline-year.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .timeline-year-label {
+      display: inline-block;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent);
+      background: var(--bg);
+      padding: 0 18px;
+      position: relative;
+      z-index: 2;
+      letter-spacing: -0.01em;
+    }
+
+    .timeline-year::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0; right: 0;
+      height: 1px;
+      background: var(--border);
+      z-index: 1;
+    }
+
+    /* ── End label ── */
+    .timeline-end {
+      text-align: center;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.8rem;
+      padding-top: 10px;
+    }
+
+    /* ── Scroll-to-top button ── */
+    #back-to-top {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #000;
+      font-size: 1.1rem;
+      border: none;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s, transform 0.2s;
+      z-index: 999;
+    }
+    #back-to-top.show { opacity: 1; pointer-events: auto; }
+    #back-to-top:hover { transform: scale(1.1); }
+
+    /* ── Mobile: single column ── */
+    @media (max-width: 580px) {
+      .timeline { --spine-left: 22px; }
+      .timeline-item.right .timeline-content,
+      .timeline-item.left  .timeline-content {
+        margin-left: 50px;
+        margin-right: 0;
+        width: calc(100% - 50px);
+        text-align: left;
+      }
+      .timeline-item.right .timeline-content::before,
+      .timeline-item.left  .timeline-content::before {
+        left: -30px; right: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="page-header">
+  <h1>Allen's Journey</h1>
+  <p>A timeline of projects, publications, and explorations — newest at the top.</p>
+</header>
+
+<div class="timeline">
+  <div class="timeline-arrow"></div>
+
+  <!-- ╔══════════════════════════════════════════════╗
+       ║  HOW TO ADD ITEMS:                          ║
+       ║  1. Find or create a year section            ║
+       ║  2. Paste a block with class="right/left"   ║
+       ║  3. Fill: date, time, tag, title, description║
+       ║  Use: data-year="2026" on the outer div     ║
+       ╚══════════════════════════════════════════════╝ -->
+
+  <!-- ════════════════════════════════════════════ 2026 ════════════════════════════════════════════ -->
+  <div class="timeline-year visible" data-year="2026">
+    <div class="timeline-year-label">2026</div>
+  </div>
+
+  <div class="timeline-item right" data-year="2026">
+    <div class="timeline-dot" style="--dot: var(--green)"></div>
+    <div class="timeline-content">
+      <span class="tag tag-current">Current</span>
+      <h3>PredNet × Transformer Integration</h3>
+      <p>Restructuring the PredNet predictive-coding model with a Transformer backbone for improved temporal representation.</p>
+      <div class="timeline-date">April 2026 · 10:30 AM</div>
+    </div>
+  </div>
+
+  <div class="timeline-item left" data-year="2026">
+    <div class="timeline-dot" style="--dot: var(--green)"></div>
+    <div class="timeline-content">
+      <span class="tag tag-current">Current</span>
+      <h3>Rust Backend Project</h3>
+      <p>Designing a production-ready Rust backend as part of an end-to-end Flutter + Rust stack.</p>
+      <div class="timeline-date">March 2026 · 02:15 PM</div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════ 2025 ════════════════════════════════════════════ -->
+  <div class="timeline-year" data-year="2025">
+    <div class="timeline-year-label">2025</div>
+  </div>
+
+  <div class="timeline-item right" data-year="2025">
+    <div class="timeline-dot" style="--dot: var(--muted)"></div>
+    <div class="timeline-content">
+      <span class="tag tag-docs">Docs</span>
+      <h3>PredNet Structure Analysis</h3>
+      <p>Published a detailed <a href="https://github.com/AIPEAC/PredNet-with-Transformer/blob/main/_docs/Original_Prenet_Design.pdf" target="_blank">annotated breakdown</a> of the original PredNet architecture with layer-by-layer diagrams.</p>
+      <div class="timeline-date">November 2025 · 09:00 AM</div>
+    </div>
+  </div>
+
+  <div class="timeline-item left" data-year="2025">
+    <div class="timeline-dot" style="--dot: var(--muted)"></div>
+    <div class="timeline-content">
+      <span class="tag tag-docs">Docs</span>
+      <h3>Transformer Self-Attention Notes</h3>
+      <p>Wrote up the mathematics behind <a href="AI_architectures/Transformer.md" target="_blank">Self-attention and Key / Query / Value</a> interactions.</p>
+      <div class="timeline-date">August 2025 · 03:45 PM</div>
+    </div>
+  </div>
+
+  <div class="timeline-item right" data-year="2025">
+    <div class="timeline-dot" style="--dot: var(--purple)"></div>
+    <div class="timeline-content">
+      <span class="tag tag-security">Security</span>
+      <h3>OGNL Injection Analysis</h3>
+      <p>Documented the underlying mechanics of <a href="https://github.com/AIPEACS/SC3010-Computer-Security/" target="_blank">OGNL injection</a> attacks, tracing the exploit path through the Struts2 expression evaluator.</p>
+      <div class="timeline-date">June 2025 · 11:20 AM</div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════ 2024 ════════════════════════════════════════════ -->
+  <div class="timeline-year" data-year="2024">
+    <div class="timeline-year-label">2024</div>
+  </div>
+
+  <div class="timeline-item left" data-year="2024">
+    <div class="timeline-dot" style="--dot: var(--purple)"></div>
+    <div class="timeline-content">
+      <span class="tag tag-security">Security</span>
+      <h3>CVE-2017-5638 Recreation</h3>
+      <p>Reproduced the Apache Struts2 RCE vulnerability using <a href="https://github.com/AIPEACS/SC3010-Computer-Security" target="_blank">PowerShell and Java</a> in a controlled lab environment.</p>
+      <div class="timeline-date">September 2024 · 04:30 PM</div>
+    </div>
+  </div>
+
+  <div class="timeline-item right" data-year="2024">
+    <div class="timeline-dot" style="--dot: var(--teal)"></div>
+    <div class="timeline-content">
+      <span class="tag tag-mobile">Flutter · Dart</span>
+      <h3>Comparable Version Sync</h3>
+      <p>Published <a href="https://github.com/AIPEAC/comparable-version-sync" target="_blank">comparable-version-sync</a> to pub.dev — a semantic version comparison and synchronisation utility.</p>
+      <div class="timeline-date">July 2024 · 01:15 PM</div>
+    </div>
+  </div>
+
+  <div class="timeline-item left" data-year="2024">
+    <div class="timeline-dot" style="--dot: var(--teal)"></div>
+    <div class="timeline-content">
+      <span class="tag tag-mobile">Flutter · Dart</span>
+      <h3>Draggable Range Selector</h3>
+      <p>Published <a href="https://github.com/AIPEAC/draggable-range-selector" target="_blank">draggable-range-selector</a> to pub.dev — a highly customisable interactive range-input widget for Flutter.</p>
+      <div class="timeline-date">May 2024 · 10:45 AM</div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════ 2023 ════════════════════════════════════════════ -->
+  <div class="timeline-year" data-year="2023">
+    <div class="timeline-year-label">2023</div>
+  </div>
+
+  <div class="timeline-item right" data-year="2023">
+    <div class="timeline-dot" style="--dot: var(--accent)"></div>
+    <div class="timeline-content">
+      <span class="tag tag-ai">AI · ML</span>
+      <h3>Monte Carlo Maze Solver</h3>
+      <p>Optimised a <a href="https://github.com/AIPEACS/SC3000-AI/blob/main/README.md#notable-developments" target="_blank">Monte Carlo algorithm</a> for maze traversal, reducing convergence time with a custom reward reshaping strategy.</p>
+      <div class="timeline-date">October 2023 · 02:00 PM</div>
+    </div>
+  </div>
+
+  <div class="timeline-item left" data-year="2023">
+    <div class="timeline-dot" style="--dot: var(--accent)"></div>
+    <div class="timeline-content">
+      <span class="tag tag-ai">AI · ML</span>
+      <h3>PredNet with PyTorch</h3>
+      <p>Rebuilt the <a href="https://github.com/AIPEAC/PyTorch-PredNet" target="_blank">PredNet predictive-coding model</a> in PyTorch from scratch, modernising the original Keras implementation.</p>
+      <div class="timeline-date">March 2023 · 08:30 AM</div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════ 2022 ════════════════════════════════════════════ -->
+  <div class="timeline-year" data-year="2022">
+    <div class="timeline-year-label">2022</div>
+  </div>
+
+  <div class="timeline-item right" data-year="2022">
+    <div class="timeline-dot" style="--dot: var(--orange)"></div>
+    <div class="timeline-content">
+      <span class="tag tag-web">Web</span>
+      <h3>Frontend in 2 Days</h3>
+      <p>Created a <a href="https://aipeac.github.io/Frontend-in-2-days/" target="_blank">step-by-step tutorial</a> covering HTML, CSS and JavaScript fundamentals — hosted on GitHub Pages.</p>
+      <div class="timeline-date">June 2022 · 12:00 PM</div>
+    </div>
+  </div>
+
+  <div class="timeline-item left" data-year="2022">
+    <div class="timeline-dot" style="--dot: var(--red)"></div>
+    <div class="timeline-content">
+      <span class="tag tag-systems">Java</span>
+      <h3>GUI Management System</h3>
+      <p>Built a full <a href="https://github.com/AIPEACS/SC2002-OOP" target="_blank">OOP-based GUI management system</a> in Java, applying SOLID principles and design patterns.</p>
+      <div class="timeline-date">February 2022 · 06:15 PM</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="timeline-end">↑ &nbsp;scroll up for the latest</div>
+
+<!-- Scroll-to-top button -->
+<button id="back-to-top" title="Back to top" aria-label="Scroll to top">↑</button>
+
+<script>
+  /* ── Entrance animations via IntersectionObserver ── */
+  const items = document.querySelectorAll('.timeline-item');
+  const years = document.querySelectorAll('.timeline-year');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  items.forEach(item => observer.observe(item));
+  years.forEach(year => observer.observe(year));
+
+  /* ── Scroll-to-top button ── */
+  const btn = document.getElementById('back-to-top');
+
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('show', window.scrollY > 320);
+  }, { passive: true });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>
