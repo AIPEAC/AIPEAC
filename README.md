@@ -16,11 +16,13 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
     * I optimized [Monte Carlo](https://github.com/AIPEACS/SC3000-AI/blob/main/README.md#notable-developments) algorithm to solve a maze
 - **Dart (Flutter)**
     - I published 2 packages to pub.dev: [Draggable-range-selector](https://github.com/AIPEAC/draggable-range-selector) & [Comparable-version-sync](https://github.com/AIPEAC/comparable-version-sync)
+- **JavaScript/HTML/CSS**
+    - [Frontend-in-2-days](https://github.com/AIPEAC/Frontend-in-2-days): A tutorial [\[web link\]](https://aipeac.github.io/Frontend-in-2-days/) for basic frontend programming
 - **Java**
     - I built a [GUI management system](https://github.com/AIPEACS/SC2002-OOP)
-    - I recreated [CVE-2017-5638](https://github.com/AIPEACS/SC3010-Computer-Security), using **PowerShell** as attacking script.
-- **JavaScript/HTML/CSS**
-    - [Frontend-in-2-days](https://github.com/AIPEAC/Frontend-in-2-days): An tutorial [\[web link\]](https://aipeac.github.io/Frontend-in-2-days/) for basic frontend programming. 
+- **PowerShell**
+    - I recreated [CVE-2017-5638](https://github.com/AIPEACS/SC3010-Computer-Security), using **PowerShell** and **Java (Struts2)**
+
 
 
 ## 🧠 My Knowledge Base - Notes and Docs
