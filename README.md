@@ -16,7 +16,6 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
     * I optimized [Monte Carlo](https://github.com/AIPEACS/SC3000-AI/blob/main/README.md#notable-developments) algorithm to solve a maze
 - **Dart (Flutter)**
     - I published 2 packages to pub.dev: [Draggable-range-selector](https://github.com/AIPEAC/draggable-range-selector) & [Comparable-version-sync](https://github.com/AIPEAC/comparable-version-sync)
-- **SQL** (T-SQL, PostgreSQL, SQLite)
 - **Java**
     - [GUI management system](https://github.com/AIPEACS/SC2002-OOP)
 - **JavaScript/HTML/CSS**
