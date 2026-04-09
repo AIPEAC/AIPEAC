@@ -6,8 +6,8 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 
 | Category | Icons |
 | :--- | :--- | 
-| **Core Development** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=py,pytorch,dart,flutter,rust" /></a> |
-| **Supplementary Tools** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=js,html,css,c,cpp,java,verilog" /></a> |
+| **Core Development** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=pytorch,flutter,rust" /></a> |
+| **Languages** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=py,dart,js,html,css,c,cpp,java,verilog" /></a> |
 | **DevOps & Databases** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=git,github,linux,docker,sqlite,postgres,powershell,bash" /></a> |
 | **System & IDEs** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=debian,windows,vscode" /></a> |
 
