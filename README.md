@@ -13,7 +13,7 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 - **Java**
     - [GUI management system](https://github.com/AIPEACS/SC2002-OOP)
 - **JavaScript/HTML/CSS**
-    - [Frontend-in-2-days](https://github.com/AIPEACS/Frontend-in-2-days): An tutorial [\[web link\]](https://aipeac.github.io/Frontend-in-2-days/) for basic frontend programming. 
+    - [Frontend-in-2-days](https://github.com/AIPEAC/Frontend-in-2-days): An tutorial [\[web link\]](https://aipeac.github.io/Frontend-in-2-days/) for basic frontend programming. 
 - **C++**
 - **Shell Scripting** (PowerShell, Bash)
 
