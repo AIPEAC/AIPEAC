@@ -3,19 +3,25 @@
 I’m Allen, an AI-focused developer. I am also interested in building end-to-end applications using Flutter (client) and Rust (backend).
 
 ## 📖 My Languages and Tools
+
+| Category | Icons |
+| :--- | :--- | 
+| **Core Development** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=py,pytorch,dart,flutter,rust" /></a> |
+| **Supplementary Tools** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=js,html,css,c,cpp,java,verilog" /></a> |
+| **DevOps & Databases** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=git,github,linux,docker,sqlite,postgres,powershell,bash" /></a> |
+| **System & IDEs** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=debian,ubuntu,windows,vscode" /></a> |
+
 - **Python (PyTorch)**
     * I have rebuilt [PredNet with PyTorch](https://github.com/AIPEAC/PyTorch-PredNet)
     * I optimized [Monte Carlo](https://github.com/AIPEACS/SC3000-AI/blob/main/README.md#notable-developments) algorithm to solve a maze
 - **Dart (Flutter)**
     - I published 2 packages to pub.dev: [Draggable-range-selector](https://github.com/AIPEAC/draggable-range-selector) & [Comparable-version-sync](https://github.com/AIPEAC/comparable-version-sync)
-- **Rust** (Backend & Performance)
 - **SQL** (T-SQL, PostgreSQL, SQLite)
 - **Java**
     - [GUI management system](https://github.com/AIPEACS/SC2002-OOP)
 - **JavaScript/HTML/CSS**
-    - [Frontend-in-2-days](https://github.com/AIPEAC/Frontend-in-2-days): An tutorial [\[web link\]](https://aipeac.github.io/Frontend-in-2-days/) for basic frontend programming. 
-- **C++**
-- **Shell Scripting** (PowerShell, Bash)
+    - [Frontend-in-2-days](https://github.com/AIPEACS/SC2002-OOP): An tutorial [\[web link\]](https://aipeac.github.io/Frontend-in-2-days/) for basic frontend programming. 
+
 
 ## 🧠 My Knowledge Base - Notes and Docs
 - **AI Architectures**
@@ -24,15 +30,19 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 - **Computer Security**
   - **OGNL injection:** Analysis of the underlying mechanics of [OGNL injection](https://github.com/AIPEACS/SC3010-Computer-Security/) attacks.
 
-
-
 ## 🚀 Next Steps
 - 🔭 **Currently working on:**
     * Restructuring PredNet with Transformer integration.
     * Building a Rust backend project.
-- 🌱 **Currently learning:** Golang, C#, and Zig.
+- 🌱 **Currently learning:**
 
----
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=go,cs,zig" />
+  </a>
+</p>
+
+
 <!--
 ## 🏆 Project Highlights
 
