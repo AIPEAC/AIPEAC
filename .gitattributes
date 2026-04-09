@@ -7,3 +7,6 @@
 *.gitattributes linguist-documentation=false
 *.gitattributes  linguist-vendored=false
 *.gitattributes  linguist-generated=false
+
+*.html linguist-detectable=false
+
