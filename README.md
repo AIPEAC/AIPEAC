@@ -17,7 +17,8 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 - **Dart (Flutter)**
     - I published 2 packages to pub.dev: [Draggable-range-selector](https://github.com/AIPEAC/draggable-range-selector) & [Comparable-version-sync](https://github.com/AIPEAC/comparable-version-sync)
 - **Java**
-    - [GUI management system](https://github.com/AIPEACS/SC2002-OOP)
+    - I built a [GUI management system](https://github.com/AIPEACS/SC2002-OOP)
+    - I recreated [CVE-2017-5638](https://github.com/AIPEACS/SC3010-Computer-Security), using **PowerShell** as attacking script.
 - **JavaScript/HTML/CSS**
     - [Frontend-in-2-days](https://github.com/AIPEACS/SC2002-OOP): An tutorial [\[web link\]](https://aipeac.github.io/Frontend-in-2-days/) for basic frontend programming. 
 
