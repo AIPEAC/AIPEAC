@@ -9,7 +9,7 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 | **Core Development** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=py,pytorch,dart,flutter,rust" /></a> |
 | **Supplementary Tools** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=js,html,css,c,cpp,java,verilog" /></a> |
 | **DevOps & Databases** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=git,github,linux,docker,sqlite,postgres,powershell,bash" /></a> |
-| **System & IDEs** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=debian,ubuntu,windows,vscode" /></a> |
+| **System & IDEs** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=debian,windows,vscode" /></a> |
 
 - **Python (PyTorch)**
     * I have rebuilt [PredNet with PyTorch](https://github.com/AIPEAC/PyTorch-PredNet)
