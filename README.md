@@ -48,3 +48,11 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 | Project | Status/Stats | Link |
 | :--- | :--- | :--- |
 | **Draggable Range Selector** | ![Downloads](https://camo.githubusercontent.com/04fdbe3a7c04b0e194d2c9defb596f6916ba47d7f405a1b3e84d8e8cf923dc18/68747470733a2f2f696d672e736869656c64732e696f2f7075622f646d2f647261676761626c655f72616e67655f73656c6563746f723f7374796c653d666c61742d737175617265) | [View on pub.dev](https://pub.dev/packages/draggable_range_selector) |
+
+| Category | Icons |
+| :--- | :--- | 
+| **Core Tech** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=pytorch,flutter,rust" /></a> |
+| **Frameworks** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=vue,express,tailwind" /></a> |
+| **Languages** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=py,dart,js,html,css,c,cpp,java,verilog" /></a> |
+| **DevOps & DB** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=git,github,linux,docker,sqlite,postgres" /></a> |
+| **System & IDE** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=debian,windows,vscode,powershell,bash" /></a> |
