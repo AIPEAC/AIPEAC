@@ -21,7 +21,7 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 - **Java**
     - I built a [GUI management system](https://github.com/AIPEACS/SC2002-OOP)
 - **PowerShell**
-    - I recreated [CVE-2017-5638](https://github.com/AIPEACS/SC3010-Computer-Security), using **PowerShell** and **Java (Struts2)**
+    - I recreated [CVE-2017-5638](https://github.com/AIPEACS/SC3010-Computer-Security), using PowerShell and Java (Struts2)
 
 
 
