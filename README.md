@@ -38,7 +38,7 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 - 🌱 **Currently learning:**
          <p align="left">
            <a href="https://skillicons.dev">
-             <img src="https://skillicons.dev/icons?i=go,cs,zig" height="40"/>
+             <img src="https://skillicons.dev/icons?i=go,cs,net,zig" height="40"/>
            </a>
          </p>
 
