@@ -11,7 +11,9 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 - **Rust** (Backend & Performance)
 - **SQL** (T-SQL, PostgreSQL, SQLite)
 - **Java**
-    * [GUI management system](https://github.com/AIPEACS/SC2002-OOP)
+    - [GUI management system](https://github.com/AIPEACS/SC2002-OOP)
+- **JavaScript/HTML/CSS**
+    - [Frontend-in-2-days](https://github.com/AIPEACS/SC2002-OOP): An tutorial webpage [\[web link\]](https://aipeac.github.io/Frontend-in-2-days/) on basic frontend programming. 
 - **C++**
 - **Shell Scripting** (PowerShell, Bash)
 
