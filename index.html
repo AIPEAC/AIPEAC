@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Allen's Timeline</title>
+  <title>AIPEAC's Timeline</title>
   <style>
     :root {
       --bg:       #0d1117;
@@ -96,7 +96,7 @@
       position: relative;
       display: flex;
       align-items: flex-start;
-      margin-bottom: 44px;
+      margin-bottom: 12px;
       /* Entrance animation (JS adds .visible) */
       opacity: 0;
       transform: translateY(18px);
@@ -197,6 +197,65 @@
       opacity: 0.6;
     }
 
+    /* ── Language/framework tags (card footer) ── */
+    .lang-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 8px;
+    }
+    .timeline-item.left .lang-tags { justify-content: flex-end; }
+    .lang-tag {
+      font-size: 0.62rem;
+      font-weight: 600;
+      padding: 1px 8px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Month separator (within a year) ── */
+    .timeline-month {
+      position: relative;
+      margin: 36px 0 12px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.35s ease 0.05s, transform 0.35s ease 0.05s;
+    }
+    .timeline-month.visible { opacity: 1; transform: translateY(0); }
+    .timeline-month-label {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: var(--bg);
+      padding: 0 14px;
+      position: relative;
+      z-index: 2;
+      opacity: 0.55;
+    }
+    
+
+    /* ── Misc / collapsible cards ── */
+    .timeline-content.folded .fold-body { display: none; }
+    .fold-footer { text-align: left; margin-top: 6px; }
+    .fold-toggle {
+      background: none;
+      border: none;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 0.9rem;
+      padding: 0;
+      line-height: 1;
+      opacity: 0.5;
+      transition: opacity 0.2s;
+    }
+    .fold-toggle:hover { opacity: 1; }
+
     /* ── Year separator ── */
     .timeline-year {
       position: relative;
@@ -282,8 +341,8 @@
 <body>
 
 <header class="page-header">
-  <h1>Timeline of AIPEAC</h1>
-  <p>A timeline of projects, and explorations.</p>
+  <h1>AIPEAC's Timeline</h1>
+  <p>A timeline of projects and explorations.</p>
 </header>
 
 <div class="timeline">
@@ -291,10 +350,9 @@
 
   <!-- ╔══════════════════════════════════════════════╗
        ║  HOW TO ADD ITEMS:                          ║
-       ║  1. Find or create a year section            ║
+       ║  1. Find or create a year/month section      ║
        ║  2. Paste a block with class="right/left"   ║
-       ║  3. Fill: date, time, tag, title, description║
-       ║  Use: data-year="2026" on the outer div     ║
+       ║  3. Add misc class + fold markup for misc   ║
        ╚══════════════════════════════════════════════╝ -->
 
   <!-- ════════════════════════════════════════════ 2026 ════════════════════════════════════════════ -->
@@ -302,93 +360,147 @@
     <div class="timeline-year-label">2026</div>
   </div>
 
-  <div class="timeline-item right" data-year="2026">
-    <div class="timeline-dot" style="--dot: var(--green)"></div>
-    <div class="timeline-content">
-      <span class="tag tag-current">Current</span>
-      <h3>PredNet × Transformer Integration</h3>
-      <p>Restructuring the PredNet predictive-coding model with a Transformer backbone for improved temporal representation.</p>
-      <div class="timeline-date">April 2026</div>
-    </div>
-  </div>
-
-  <div class="timeline-item left" data-year="2026">
-    <div class="timeline-dot" style="--dot: var(--purple)"></div>
-    <div class="timeline-content">
-      <span class="tag tag-security">Security</span>
-      <h3>OGNL Injection Analysis</h3>
-      <p>Documented the underlying mechanics of <a href="https://github.com/AIPEACS/SC3010-Computer-Security/" target="_blank">OGNL injection</a> attacks, tracing the exploit path through the Struts2 expression evaluator.</p>
-      <div class="timeline-date">April 2026</div>
-    </div>
-  </div>
-
-  <div class="timeline-item right" data-year="2026">
-    <div class="timeline-dot" style="--dot: var(--purple)"></div>
-    <div class="timeline-content">
-      <span class="tag tag-security">Security</span>
-      <h3>CVE-2017-5638 Recreation</h3>
-      <p>Reproduced the Apache Struts2 RCE vulnerability using <a href="https://github.com/AIPEACS/SC3010-Computer-Security" target="_blank">PowerShell and Java</a> in a controlled lab environment.</p>
-      <div class="timeline-date">April 2026</div>
-    </div>
-  </div>
-
-  <div class="timeline-item left" data-year="2026">
+  <!-- ── April 2026 (first month of the timeline — no separator) ── -->
+  <div class="timeline-item" data-year="2026">
     <div class="timeline-dot" style="--dot: var(--orange)"></div>
     <div class="timeline-content">
       <span class="tag tag-web">Web</span>
       <h3>Frontend in 2 Days</h3>
       <p>Created a <a href="https://aipeac.github.io/Frontend-in-2-days/" target="_blank">step-by-step tutorial</a> covering HTML, CSS and JavaScript fundamentals — hosted on GitHub Pages.</p>
       <div class="timeline-date">April 2026</div>
+      <div class="lang-tags">
+        <span class="lang-tag">JavaScript</span>
+        <span class="lang-tag">HTML</span>
+        <span class="lang-tag">CSS</span>
+      </div>
     </div>
   </div>
 
-  <div class="timeline-item right" data-year="2026">
+  <div class="timeline-item misc" data-year="2026">
     <div class="timeline-dot" style="--dot: var(--orange)"></div>
-    <div class="timeline-content">
+    <div class="timeline-content folded">
       <span class="tag tag-web">Web</span>
       <h3>GitHub Jump to Profile</h3>
-      <p>Published <a href="https://github.com/AIPEACM/github-jump-to-profile" target="_blank">github-jump-to-profile</a> — a browser userscript that lets you quickly navigate to any GitHub user's profile page.</p>
-      <div class="timeline-date">April 2026</div>
+      <div class="fold-body">
+        <p>Published <a href="https://github.com/AIPEACM/github-jump-to-profile" target="_blank">github-jump-to-profile</a> — a browser userscript that redirects the GitHub avatar click to your profile instead of the home feed.</p>
+        <div class="timeline-date">April 2026</div>
+        <div class="lang-tags">
+          <span class="lang-tag">JavaScript</span>
+          <span class="lang-tag">Userscript</span>
+        </div>
+      </div>
+      <div class="fold-footer">
+        <button class="fold-toggle" aria-expanded="false" title="Expand">∨</button>
+      </div>
     </div>
   </div>
 
-  <div class="timeline-item right" data-year="2026">
+  <div class="timeline-item" data-year="2026">
+    <div class="timeline-dot" style="--dot: var(--purple)"></div>
+    <div class="timeline-content">
+      <span class="tag tag-security">Security</span>
+      <h3>CVE-2017-5638 Recreation</h3>
+      <p>Reproduced the Apache Struts2 RCE vulnerability using <a href="https://github.com/AIPEACS/SC3010-Computer-Security" target="_blank">PowerShell and Java</a> in a controlled lab environment.</p>
+      <div class="timeline-date">April 2026</div>
+      <div class="lang-tags">
+        <span class="lang-tag">Java</span>
+        <span class="lang-tag">PowerShell</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline-item" data-year="2026">
+    <div class="timeline-dot" style="--dot: var(--purple)"></div>
+    <div class="timeline-content">
+      <span class="tag tag-security">Security</span>
+      <h3>OGNL Injection Analysis</h3>
+      <p>Documented the underlying mechanics of <a href="https://github.com/AIPEACS/SC3010-Computer-Security/" target="_blank">OGNL injection</a> attacks, tracing the exploit path through the Struts2 expression evaluator.</p>
+      <div class="timeline-date">April 2026</div>
+      <div class="lang-tags">
+        <span class="lang-tag">Java</span>
+        <span class="lang-tag">PowerShell</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline-item" data-year="2026">
+    <div class="timeline-dot" style="--dot: var(--green)"></div>
+    <div class="timeline-content">
+      <span class="tag tag-current">Current</span>
+      <h3>PredNet × Transformer Integration</h3>
+      <p>Restructuring the PredNet predictive-coding model with a Transformer backbone for improved temporal representation.</p>
+      <div class="timeline-date">April 2026</div>
+      <div class="lang-tags">
+        <span class="lang-tag">Python</span>
+        <span class="lang-tag">PyTorch</span>
+        <span class="lang-tag">Docker</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── March 2026 ── -->
+  <div class="timeline-month">
+    <div class="timeline-month-label">March 2026</div>
+  </div>
+
+  <div class="timeline-item" data-year="2026">
     <div class="timeline-dot" style="--dot: var(--teal)"></div>
     <div class="timeline-content">
       <span class="tag tag-mobile">Flutter · Dart</span>
       <h3>Comparable Version Sync</h3>
       <p>Published <a href="https://github.com/AIPEAC/comparable-version-sync" target="_blank">comparable-version-sync</a> to pub.dev — a semantic version comparison and synchronisation utility.</p>
-      <div class="timeline-date">March 2026</div>
+      <div class="timeline-date">March 16, 2026</div>
+      <div class="lang-tags">
+        <span class="lang-tag">Dart</span>
+        <span class="lang-tag">Flutter</span>
+      </div>
     </div>
   </div>
 
-  <div class="timeline-item left" data-year="2026">
+  <div class="timeline-item" data-year="2026">
     <div class="timeline-dot" style="--dot: var(--accent)"></div>
     <div class="timeline-content">
       <span class="tag tag-ai">AI · ML</span>
       <h3>Monte Carlo Maze Solver</h3>
       <p>Optimised a <a href="https://github.com/AIPEACS/SC3000-AI/blob/main/README.md#notable-developments" target="_blank">Monte Carlo algorithm</a> for maze traversal, reducing convergence time with a custom reward reshaping strategy.</p>
-      <div class="timeline-date">March 2026</div>
+      <div class="timeline-date">March 14, 2026</div>
+      <div class="lang-tags">
+        <span class="lang-tag">Python</span>
+        <span class="lang-tag">Prolog</span>
+      </div>
     </div>
   </div>
 
-  <div class="timeline-item right" data-year="2026">
+  <div class="timeline-item" data-year="2026">
     <div class="timeline-dot" style="--dot: var(--teal)"></div>
     <div class="timeline-content">
       <span class="tag tag-mobile">Flutter · Dart</span>
       <h3>Draggable Range Selector</h3>
       <p>Published <a href="https://github.com/AIPEAC/draggable-range-selector" target="_blank">draggable-range-selector</a> to pub.dev — a highly customisable interactive range-input widget for Flutter.</p>
-      <div class="timeline-date">March 2026</div>
+      <div class="timeline-date">March 5, 2026</div>
+      <div class="lang-tags">
+        <span class="lang-tag">Dart</span>
+        <span class="lang-tag">Flutter</span>
+      </div>
     </div>
   </div>
 
-  <div class="timeline-item left" data-year="2026">
+  <!-- ── February 2026 ── -->
+  <div class="timeline-month">
+    <div class="timeline-month-label">February 2026</div>
+  </div>
+
+  <div class="timeline-item" data-year="2026">
     <div class="timeline-dot" style="--dot: var(--accent)"></div>
     <div class="timeline-content">
       <span class="tag tag-ai">AI · ML</span>
       <h3>PredNet with PyTorch</h3>
       <p>Rebuilt the <a href="https://github.com/AIPEAC/PyTorch-PredNet" target="_blank">PredNet predictive-coding model</a> in PyTorch from scratch, modernising the original Keras implementation.</p>
-      <div class="timeline-date">February 2026</div>
+      <div class="timeline-date">February 9, 2026</div>
+      <div class="lang-tags">
+        <span class="lang-tag">Python</span>
+        <span class="lang-tag">PyTorch</span>
+      </div>
     </div>
   </div>
 
@@ -397,17 +509,25 @@
     <div class="timeline-year-label">2025</div>
   </div>
 
-  <div class="timeline-item right" data-year="2025">
+  <!-- ── November 2025  ── -->
+  <div class="timeline-month">
+    <div class="timeline-month-label">November 2025</div>
+  </div>
+
+  <div class="timeline-item" data-year="2025">
     <div class="timeline-dot" style="--dot: var(--red)"></div>
     <div class="timeline-content">
       <span class="tag tag-systems">Java</span>
       <h3>GUI Management System</h3>
-      <p>Built a full <a href="https://github.com/AIPEACS/SC2002-OOP" target="_blank">OOP-based GUI management system</a> in Java, applying SOLID principles and design patterns.</p>
+      <p>Built a full <a href="https://github.com/AIPEACS/SC2002-OOP" target="_blank">OOP-based Java management system</a> applying SOLID principles and design patterns.</p>
       <div class="timeline-date">November 2025</div>
+      <div class="lang-tags">
+        <span class="lang-tag">Java</span>
+      </div>
     </div>
   </div>
 
-  <div class="timeline-item left" data-year="2025">
+  <div class="timeline-item" data-year="2025">
     <div class="timeline-dot" style="--dot: var(--muted)"></div>
     <div class="timeline-content">
       <span class="tag tag-docs">Docs</span>
@@ -417,7 +537,12 @@
     </div>
   </div>
 
-  <div class="timeline-item right" data-year="2025">
+  <!-- ── August 2025 ── -->
+  <div class="timeline-month">
+    <div class="timeline-month-label">August 2025</div>
+  </div>
+
+  <div class="timeline-item" data-year="2025">
     <div class="timeline-dot" style="--dot: var(--muted)"></div>
     <div class="timeline-content">
       <span class="tag tag-docs">Docs</span>
@@ -435,6 +560,11 @@
 <button id="back-to-top" title="Back to top" aria-label="Scroll to top">↑</button>
 
 <script>
+  /* ── Auto-assign left/right alternation from document order ── */
+  document.querySelectorAll('.timeline-item').forEach((item, i) => {
+    item.classList.add(i % 2 === 0 ? 'right' : 'left');
+  });
+
   /* ── Entrance animations via IntersectionObserver ── */
   const items = document.querySelectorAll('.timeline-item');
   const years = document.querySelectorAll('.timeline-year');
@@ -449,15 +579,26 @@
 
   items.forEach(item => observer.observe(item));
   years.forEach(year => observer.observe(year));
+  document.querySelectorAll('.timeline-month').forEach(m => observer.observe(m));
+
+  /* ── Fold / unfold misc cards ── */
+  document.querySelectorAll('.fold-toggle').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const content = toggle.closest('.timeline-content');
+      const nowFolded = content.classList.toggle('folded');
+      toggle.textContent = nowFolded ? '∨' : '∧';
+      toggle.setAttribute('aria-expanded', String(!nowFolded));
+    });
+  });
 
   /* ── Scroll-to-top button ── */
-  const btn = document.getElementById('back-to-top');
+  const topBtn = document.getElementById('back-to-top');
 
   window.addEventListener('scroll', () => {
-    btn.classList.toggle('show', window.scrollY > 320);
+    topBtn.classList.toggle('show', window.scrollY > 320);
   }, { passive: true });
 
-  btn.addEventListener('click', () => {
+  topBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 </script>
