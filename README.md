@@ -23,7 +23,6 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 - **PowerShell**
     - I recreated [CVE-2017-5638](https://github.com/AIPEACS/SC3010-Computer-Security), using PowerShell and Java (Struts2)
 
-
 ## 🧠 My Knowledge Base - Notes and Docs
 - **AI Architectures**
     - **Transformer:** Maths behind [Self-attention and Key, Query, Value](AI_architectures/Transformer.md) interactions.
@@ -35,6 +34,7 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 - 🔭 **Currently working on:**
     * Restructuring PredNet with Transformer integration.
     * Building a Rust backend project.
+    * Working on exploring Makinson's approach on default logic.
 - 🌱 **Currently learning:**
          <p align="left">
            <a href="https://skillicons.dev">
