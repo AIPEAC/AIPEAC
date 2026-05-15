@@ -11,19 +11,10 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 | **DevOps & Databases** | <a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=git,bash,docker,podman,powershell,batch,sqlite,postgresql,sqlserver" height="40"/></a> |
 | **System & Tools** | <a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=debian,windows,photoshop,vscode" height="40"/></a> |
 
-- **Python (PyTorch)**
-    * I have rebuilt [PredNet with PyTorch](https://github.com/AIPEAC/PyTorch-PredNet)
-    * I optimized [Monte Carlo](https://github.com/AIPEACS/SC3000-AI/blob/main/README.md#notable-developments) algorithm to solve a maze
-- **Dart (Flutter)**
-    - I published 2 packages to pub.dev: [Draggable-range-selector](https://github.com/AIPEAC/draggable-range-selector) & [Comparable-version-sync](https://github.com/AIPEAC/comparable-version-sync)
-- **JavaScript/HTML/CSS**
-    - [Frontend-in-2-days](https://github.com/AIPEAC/Frontend-in-2-days): A tutorial [\[web link\]](https://aipeac.github.io/Frontend-in-2-days/) for basic frontend programming
-- **Java**
-    - I built a [GUI management system](https://github.com/AIPEACS/SC2002-OOP)
-- **PowerShell**
-    - I recreated [CVE-2017-5638](https://github.com/AIPEACS/SC3010-Computer-Security), using PowerShell and Java (Struts2)
-- **Prolog**
-    - I explored different approaches to implementing [Makinson's algorithm](https://github.com/AIPEAC/Makinson-Default-Logics),
+> ### [View my Project Timeline](https://aipeac.github.io/AIPEAC/)
+> Explore the evolution of my work from early experiments to complex AI architectures.
+
+
 ## 🧠 My Knowledge Base - Notes and Docs
 - **AI Architectures**
     - **Transformer:** Maths behind [Self-attention and Key, Query, Value](AI_architectures/Transformer.md) interactions.
