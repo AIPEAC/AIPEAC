@@ -1,0 +1,20 @@
+*.md linguist-detectable=true
+*.md linguist-documentation=false
+*.md linguist-vendored=false
+*.md linguist-generated=false
+
+*.gitattributes linguist-detectable=true
+*.gitattributes linguist-documentation=false
+*.gitattributes  linguist-vendored=false
+*.gitattributes  linguist-generated=false
+
+*.gitmodules linguist-detectable=true
+*.gitmodules linguist-documentation=false
+*.gitmodules  linguist-vendored=false
+*.gitmodules  linguist-generated=false
+
+
+*.html linguist-detectable=false
+*.css linguist-detectable=false
+
+.vendor/** linguist-detectable=false

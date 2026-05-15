@@ -1,0 +1,360 @@
+/* ═══════════════════════════════════════════════════════════════
+   AIPEAC Timeline Styles
+   ───────────────────────────────────────────────────────────────
+   Language colors are sourced from GitHub Linguist:
+   https://github.com/github/linguist
+   (vendored under .vendor/github-linguist/ as a git submodule)
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Base UI colors (kept) ── */
+  --bg:       #0d1117;
+  --surface:  #161b22;
+  --border:   #30363d;
+  --text:     #e6edf3;
+  --muted:    #8b949e;
+  --accent:   #58a6ff;
+
+  /* ── Special colors ── */
+  --docs:     #8b949e;
+
+  /* ── Language colors from GitHub Linguist ── */
+  --python:   #167dd8;
+  --dart:     #00B4AB;
+
+  --prolog:   #f10745;
+
+  --javascript: #f1e05a;
+  --typescript: #3178c6;
+  --html:     #e34c26;
+  --css:      #663399;
+  --java:     #d49a12;
+
+  --cpp:      #f34b7d;
+  --bash:     #89e051;
+  --powershell: #012456;
+  --sql:      #ff9d00;
+  --tsql:     #ff9d00;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+  padding: 0 20px 100px;
+}
+
+/* ── Header ── */
+.page-header {
+  text-align: center;
+  padding: 60px 0 70px;
+}
+.page-header h1 {
+  font-size: 2rem;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+}
+.page-header p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ── Timeline wrapper ── */
+.timeline {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+
+  /* The vertical spine */
+  --spine-left: 50%;
+}
+
+/* Spine line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  left: var(--spine-left);
+  width: 2px;
+  background: var(--border);
+  transform: translateX(-50%);
+}
+
+/* ↑ Arrow at the very top */
+.timeline-arrow {
+  position: absolute;
+  top: -22px;
+  left: var(--spine-left);
+  transform: translateX(-50%);
+  width: 0; height: 0;
+  border-left:  7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 18px solid var(--accent);
+}
+
+/* ── Individual items ── */
+/*
+  HOW TO ADD A NEW ITEM
+  ─────────────────────
+  Copy one of the blocks below and paste it ABOVE the existing ones
+  (newest items go at the top).
+
+  Use  class="timeline-item right"  →  content on the RIGHT side
+  Use  class="timeline-item left"   →  content on the LEFT side
+
+  Change the dot colour with  style="--dot: #yourcolor"
+  Pick a tag class: .tag-current  .tag-ai  .tag-web
+                    .tag-security .tag-mobile .tag-systems .tag-docs
+*/
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  /* Entrance animation (JS adds .visible) */
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dot on the spine */
+.timeline-dot {
+  --dot: var(--accent);
+  position: absolute;
+  left: var(--spine-left);
+  top: 18px;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--dot);
+  border: 2px solid var(--bg);
+  transform: translateX(-50%);
+  z-index: 1;
+  transition: transform 0.2s;
+}
+.timeline-item:hover .timeline-dot { transform: translateX(-50%) scale(1.35); }
+
+/* Content card */
+.timeline-content {
+  width: calc(50% - 42px);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.timeline-content:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent)22;
+}
+
+/* RIGHT side: card sits to the right of the spine */
+.timeline-item.right .timeline-content { margin-left: calc(50% + 30px); }
+
+/* LEFT side: card sits to the left of the spine */
+.timeline-item.left  .timeline-content { margin-right: calc(50% + 30px); }
+
+/* Connector line (card → dot) */
+.timeline-content::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  height: 2px;
+  width: 30px;
+  background: var(--border);
+}
+.timeline-item.right .timeline-content::before { left: calc(50% - 30px); }
+.timeline-item.left  .timeline-content::before { right: calc(50% - 30px); }
+
+/* ── Tags ── */
+.tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 2px 9px;
+  border-radius: 20px;
+  margin-bottom: 9px;
+}
+.tag-current  { background: rgba(53,114,165,.18);  color: var(--python);  }
+.tag-ai       { background: rgba(44, 113, 171, 0.397); color: var(--python); }
+.tag-web      { background: rgba(241,224,90,.18); color: var(--javascript); }
+.tag-security { background: rgba(176,114,25,.18); color: var(--java);   }
+.tag-mobile   { background: rgba(0,180,171,.15);  color: var(--dart);   }
+.tag-systems  { background: rgba(176,114,25,.15); color: var(--java); }
+.tag-docs     { background: rgba(139,148,158,.15);color: var(--muted);  }
+.tag-symolicai{ background: rgba(85, 40, 40, 0.956);  color: var(--prolog); }
+.tag-scripts   { background: rgba(137,224,81,.15);  color: var(--bash);   }
+
+.timeline-content h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.timeline-content p {
+  font-size: 0.84rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+.timeline-content a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.timeline-content a:hover { text-decoration: underline; }
+
+.timeline-date {
+  margin-top: 10px;
+  font-size: 0.74rem;
+  color: var(--muted);
+  opacity: 0.6;
+}
+
+/* ── Language/framework tags (card footer) ── */
+.lang-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 8px;
+}
+.timeline-item.left  .lang-tags { justify-content: flex-start; }
+.lang-tag {
+  font-size: 0.62rem;
+  font-weight: 600;
+  padding: 1px 8px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+/* ── Month separator (within a year) ── */
+.timeline-month {
+  position: relative;
+  margin: 36px 0 12px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.35s ease 0.05s, transform 0.35s ease 0.05s;
+}
+.timeline-month.visible { opacity: 1; transform: translateY(0); }
+.timeline-month-label {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--bg);
+  padding: 0 14px;
+  position: relative;
+  z-index: 2;
+  opacity: 0.55;
+}
+
+
+/* ── Misc / collapsible cards ── */
+.timeline-content.folded .fold-body { display: none; }
+.fold-footer { margin-top: 6px; }
+.timeline-item.right .fold-footer { text-align: left; }
+.timeline-item.left  .fold-footer { text-align: right; }
+.fold-toggle {
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0;
+  line-height: 1;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+.fold-toggle:hover { opacity: 1; }
+
+/* ── Year separator ── */
+.timeline-year {
+  position: relative;
+  margin: 68px 0 48px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.45s ease 0.1s, transform 0.45s ease 0.1s;
+}
+.timeline-year.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-year-label {
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--bg);
+  padding: 0 18px;
+  position: relative;
+  z-index: 2;
+  letter-spacing: -0.01em;
+}
+
+.timeline-year::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0; right: 0;
+  height: 1px;
+  background: var(--border);
+  z-index: 1;
+}
+
+/* ── End label ── */
+.timeline-end {
+  text-align: center;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  padding-top: 10px;
+}
+
+/* ── Scroll-to-top button ── */
+#back-to-top {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #000;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.2s;
+  z-index: 999;
+}
+#back-to-top.show { opacity: 1; pointer-events: auto; }
+#back-to-top:hover { transform: scale(1.1); }
+
+/* ── Mobile: single column ── */
+@media (max-width: 580px) {
+  .timeline { --spine-left: 22px; }
+  .timeline-item.right .timeline-content,
+  .timeline-item.left  .timeline-content {
+    margin-left: 50px;
+    margin-right: 0;
+    width: calc(100% - 50px);
+    text-align: left;
+  }
+  .timeline-item.right .timeline-content::before,
+  .timeline-item.left  .timeline-content::before {
+    left: -30px; right: auto;
+  }
+}

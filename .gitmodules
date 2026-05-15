@@ -1,0 +1,3 @@
+[submodule ".vendor/github-linguist"]
+	path = .vendor/github-linguist
+	url = https://github.com/github/linguist.git
