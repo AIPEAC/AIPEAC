@@ -1,6 +1,6 @@
 ## Hi there 👋
 
-I’m Allen, an AI-focused developer. I am also interested in building end-to-end applications using Flutter (client) and Rust (backend). 
+I’m Allen, an AI-focused developer. I am also interested in building end-to-end applications using Flutter and Rust. 
 
 ## 📖 My Languages and Tools
 
@@ -11,24 +11,17 @@ I’m Allen, an AI-focused developer. I am also interested in building end-to-en
 | **DevOps & Databases** | <a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=git,bash,docker,podman,powershell,batch,sqlite,postgresql,sqlserver" height="40"/></a> |
 | **System & Tools** | <a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=debian,windows,photoshop,vscode" height="40"/></a> |
 
-> ### [View my Project Timeline](https://aipeac.github.io/AIPEAC/)
-> Explore the evolution of my work from early experiments to complex AI architectures.
+> ### 🌱 [View my Project and Learning Timeline](https://aipeac.github.io/AIPEAC/)
+> Explore the evolution of my studying and working.
 
-
-## 🧠 My Knowledge Base - Notes and Docs
-- **AI Architectures**
-    - **Transformer:** Maths behind [Self-attention and Key, Query, Value](AI_architectures/Transformer.md) interactions.
-    - **PredNet:** Detailed demonstration and analysis of [PredNet Structure](https://github.com/AIPEAC/PredNet-with-Transformer/blob/main/_docs/Original_Prenet_Design.pdf).
-- **Computer Security**
-  - **OGNL injection:** Analysis of the underlying mechanics of [OGNL injection](https://github.com/AIPEACS/SC3010-Computer-Security/) attacks.
-
-## 🚀 Next Steps
 <!--
+## 🚀 Next Steps
+
 - 🔭 **Currently working on:**
     * Restructuring PredNet with Transformer integration.
     * Building a Rust backend project.
--->
-- 🌱 **Currently learning:**
+
+- **Currently learning:**
          <p align="left">
            <a href="https://skillicons.dev">
              <img src="https://skills.syvixor.com/api/icons?perline=15&i=go,csharp,dotnet,zig" height="40"/>

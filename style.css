@@ -17,6 +17,7 @@
 
   /* ── Special colors ── */
   --docs:     #8b949e;
+  --security:   #129ed5;
 
   /* ── Language colors from GitHub Linguist ── */
   --python:   #167dd8;
@@ -32,7 +33,7 @@
 
   --cpp:      #f34b7d;
   --bash:     #89e051;
-  --powershell: #012456;
+  --powershell: #0265c2;
   --sql:      #ff9d00;
   --tsql:     #ff9d00;
 }
@@ -221,12 +222,13 @@ body {
 .tag-current  { background: rgba(53,114,165,.18);  color: var(--python);  }
 .tag-ai       { background: rgba(44, 113, 171, 0.397); color: var(--python); }
 .tag-web      { background: rgba(241,224,90,.18); color: var(--javascript); }
-.tag-security { background: rgba(176,114,25,.18); color: var(--java);   }
 .tag-mobile   { background: rgba(0,180,171,.15);  color: var(--dart);   }
 .tag-systems  { background: rgba(176,114,25,.15); color: var(--java); }
-.tag-docs     { background: rgba(139,148,158,.15);color: var(--muted);  }
 .tag-symolicai{ background: rgba(85, 40, 40, 0.956);  color: var(--prolog); }
 .tag-scripts   { background: rgba(137,224,81,.15);  color: var(--bash);   }
+/* special tags */
+.tag-docs     { background: rgba(139,148,158,.15);color: var(--docs);  }
+.tag-security { background: rgba(14, 102, 209, 0.171); color: var(--security); }
 
 .timeline-content h3 {
   font-size: 0.95rem;
