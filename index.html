@@ -13,6 +13,8 @@
   <p>A timeline of projects and explorations.</p>
 
   <div class="filter-bar">
+    <button class="scope-toggle" data-scope="all" title="Scope: All">◎</button>
+    <button class="filter-btn" data-filter="ongoing">Ongoing</button>
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="ai">AI</button>
     <button class="filter-btn" data-filter="flutter">Flutter</button>
@@ -41,7 +43,7 @@
   <div class="timeline-item" data-year="2026">
     <div class="timeline-dot" style="--dot: var(--bash)"></div>
     <div class="timeline-content">
-      <span class="tag tag-scripts">Script</span>
+      <span class="tag tag-scripts">Script</span><span class="tag tag-personal">Personal</span>
       <h3>Flutter No debugPrint Release</h3>
       <p>Published <a href="https://github.com/AIPEAC/flutter-no-debugprint-release" target="_blank">flutter-no-debugprint-release</a> — a Flutter utility that automatically strips debugPrint statements from release builds.</p>
       <div class="timeline-date">May 2026</div>
@@ -63,7 +65,7 @@
   <div class="timeline-item" data-year="2026">
     <div class="timeline-dot" style="--dot: var(--prolog)"></div>
     <div class="timeline-content">
-      <span class="tag tag-symolicai">Symbolic AI</span>
+      <span class="tag tag-symolicai">Symbolic AI</span><span class="tag tag-personal">Personal</span>
       <h3>Makinson Default Logics</h3>
       <p>Created a <a href="https://github.com/AIPEAC/Makinson-Default-Logics" target="_blank">default logics implementation analysis</a> Using Prolog to analyze the implementation of Makinson's approach via Monte Carlo.</p>
       <div class="timeline-date">April 2026</div>
@@ -76,7 +78,7 @@
   <div class="timeline-item" data-year="2026">
     <div class="timeline-dot" style="--dot: var(--javascript)"></div>
     <div class="timeline-content">
-      <span class="tag tag-web">Web</span>
+      <span class="tag tag-web">Web</span><span class="tag tag-personal">Personal</span>
       <h3>Frontend in 2 Days</h3>
       <p>Created a <a href="https://aipeac.github.io/Frontend-in-2-days/" target="_blank">step-by-step tutorial</a> covering HTML, CSS and JavaScript fundamentals — hosted on GitHub Pages.</p>
       <div class="timeline-date">April 2026</div>
@@ -91,7 +93,7 @@
   <div class="timeline-item misc" data-year="2026">
     <div class="timeline-dot" style="--dot: var(--javascript)"></div>
     <div class="timeline-content folded">
-      <span class="tag tag-web">Web</span>
+      <span class="tag tag-web">Web</span><span class="tag tag-personal">Personal</span>
       <h3>GitHub Jump to Profile</h3>
       <div class="fold-body">
         <p>Published <a href="https://github.com/AIPEACM/github-jump-to-profile" target="_blank">github-jump-to-profile</a> — a browser userscript that redirects the GitHub avatar click to your profile instead of the home feed.</p>
@@ -110,7 +112,7 @@
   <div class="timeline-item" data-year="2026">
     <div class="timeline-dot" style="--dot: var(--security)"></div>
     <div class="timeline-content">
-      <span class="tag tag-security">Security</span>
+      <span class="tag tag-security">Security</span><span class="tag tag-school">School</span>
       <h3>CVE-2017-5638 Recreation</h3>
       <p>Reproduced the <a href="https://github.com/AIPEACS/SC3010-Computer-Security" target="_blank">Apache Struts2 RCE vulnerability </a>using PowerShell and Java in a controlled lab environment.</p>
       <div class="timeline-date">April 2026</div>
@@ -124,7 +126,7 @@
   <div class="timeline-item" data-year="2026">
     <div class="timeline-dot" style="--dot: var(--docs)"></div>
     <div class="timeline-content">
-      <span class="tag tag-docs">Documentation</span>
+      <span class="tag tag-docs">Documentation</span><span class="tag tag-school">School</span>
       <h3>OGNL Injection Analysis</h3>
       <p>Documented the underlying mechanics of <a href="https://github.com/AIPEACS/SC3010-Computer-Security/" target="_blank">OGNL injection</a> attacks, tracing the exploit path through the Struts2 expression evaluator.</p>
       <div class="timeline-date">April 2026</div>
@@ -134,6 +136,7 @@
       </div>
     </div>
   </div>
+  
   <!-- this one is currently in hiatus
   <div class="timeline-item" data-year="2026">
     <div class="timeline-dot" style="--dot: var(--python)"></div>
@@ -152,6 +155,20 @@
   -->
 
   <!-- ── March 2026 ── -->
+
+  <div class="timeline-item" data-year="2026">
+    <div class="timeline-dot" style="--dot: var(--sql)"></div>
+    <div class="timeline-content">
+      <span class="tag tag-sql">Database</span><span class="tag tag-school">School</span>
+      <h3>Database Utility</h3>
+      <p>Coded the <a href="https://github.com/AIPEACS/SC2207-Database" target="_blank">Database Utility</a> and implemented auto SQL-insertion functionality.</p>
+      <div class="timeline-date">March 2026</div>
+      <div class="lang-tags">
+        <span class="lang-tag">T-SQL</span>
+      </div>
+    </div>
+  </div>
+
   <div class="timeline-month">
     <div class="timeline-month-label">March 2026</div>
   </div>
@@ -159,7 +176,7 @@
   <div class="timeline-item" data-year="2026">
     <div class="timeline-dot" style="--dot: var(--dart)"></div>
     <div class="timeline-content">
-      <span class="tag tag-mobile">Flutter · Dart</span>
+      <span class="tag tag-mobile">Flutter · Dart</span><span class="tag tag-personal">Personal</span>
       <h3>Comparable Version Sync</h3>
       <p>Published <a href="https://github.com/AIPEAC/comparable-version-sync" target="_blank">comparable-version-sync</a> to pub.dev — a semantic version comparison and synchronisation utility.</p>
       <div class="timeline-date">March 2026</div>
@@ -173,7 +190,7 @@
   <div class="timeline-item" data-year="2026">
     <div class="timeline-dot" style="--dot: var(--python)"></div>
     <div class="timeline-content">
-      <span class="tag tag-ai">AI · ML</span>
+      <span class="tag tag-ai">AI · ML</span><span class="tag tag-school">School</span>
       <h3>Monte Carlo Maze Solver</h3>
       <p>Optimised a <a href="https://github.com/AIPEACS/SC3000-AI/blob/main/README.md#notable-developments" target="_blank">Monte Carlo algorithm</a> for maze traversal, reducing convergence time with a custom reward reshaping strategy.</p>
       <div class="timeline-date">March 2026</div>
@@ -187,7 +204,7 @@
   <div class="timeline-item" data-year="2026">
     <div class="timeline-dot" style="--dot: var(--dart)"></div>
     <div class="timeline-content">
-      <span class="tag tag-mobile">Flutter · Dart</span>
+      <span class="tag tag-mobile">Flutter · Dart</span><span class="tag tag-personal">Personal</span>
       <h3>Draggable Range Selector</h3>
       <p>Published <a href="https://github.com/AIPEAC/draggable-range-selector" target="_blank">draggable-range-selector</a> to pub.dev — a highly customisable interactive range-input widget for Flutter.</p>
       <div class="timeline-date">March 2026</div>
@@ -206,7 +223,7 @@
   <div class="timeline-item" data-year="2026">
     <div class="timeline-dot" style="--dot: var(--python)"></div>
     <div class="timeline-content">
-      <span class="tag tag-ai">AI · ML</span>
+      <span class="tag tag-ai">AI · ML</span><span class="tag tag-personal">Personal</span>
       <h3>PredNet with PyTorch</h3>
       <p>Rebuilt the <a href="https://github.com/AIPEAC/PyTorch-PredNet" target="_blank">PredNet predictive-coding model</a> in PyTorch from scratch, modernising the original Keras implementation.</p>
       <div class="timeline-date">February 2026</div>
@@ -230,7 +247,7 @@
   <div class="timeline-item" data-year="2025">
     <div class="timeline-dot" style="--dot: var(--java)"></div>
     <div class="timeline-content">
-      <span class="tag tag-systems">Java</span>
+      <span class="tag tag-systems">Java</span><span class="tag tag-school">School</span>
       <h3>GUI Management System</h3>
       <p>Built a full <a href="https://github.com/AIPEACS/SC2002-OOP" target="_blank">OOP-based Java management system</a> applying SOLID principles and design patterns.</p>
       <div class="timeline-date">November 2025</div>
@@ -243,7 +260,7 @@
   <div class="timeline-item" data-year="2025">
     <div class="timeline-dot" style="--dot: var(--docs)"></div>
     <div class="timeline-content">
-      <span class="tag tag-docs">Documentation</span>
+      <span class="tag tag-docs">Documentation</span><span class="tag tag-personal">Personal</span>
       <h3>PredNet Structure Analysis</h3>
       <p>Published a detailed <a href="https://github.com/AIPEAC/PredNet-with-Transformer/blob/main/_docs/Original_Prenet_Design.pdf" target="_blank">annotated breakdown</a> of the original PredNet architecture with layer-by-layer diagrams.</p>
       <div class="timeline-date">November 2025</div>
@@ -258,7 +275,7 @@
   <div class="timeline-item" data-year="2025">
     <div class="timeline-dot" style="--dot: var(--docs)"></div>
     <div class="timeline-content">
-      <span class="tag tag-docs">Documentation</span>
+      <span class="tag tag-docs">Documentation</span><span class="tag tag-personal">Personal</span>
       <h3>Transformer Self-Attention Notes</h3>
       <p>Wrote up the mathematics behind <a href="AI_architectures/Transformer.md" target="_blank">Self-attention and Key / Query / Value</a> interactions.</p>
       <div class="timeline-date">August 2025</div>

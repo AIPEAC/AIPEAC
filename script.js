@@ -33,6 +33,7 @@ document.querySelectorAll('.fold-toggle').forEach(toggle => {
 const filterBtns = document.querySelectorAll('.filter-btn');
 const timelineMonths = document.querySelectorAll('.timeline-month');
 const timelineYears = document.querySelectorAll('.timeline-year');
+const scopeToggle = document.querySelector('.scope-toggle');
 
 // Map filter value to tag classes that match
 const filterMap = {
@@ -40,8 +41,12 @@ const filterMap = {
   flutter: ['tag-mobile'],
   web: ['tag-web'],
   docs: ['tag-docs'],
-  other: ['tag-scripts', 'tag-security', 'tag-systems', 'tag-current'],
+  other: ['tag-scripts', 'tag-security', 'tag-systems', 'tag-sql'],
+  ongoing: ['tag-ongoing', 'tag-current'],
 };
+
+let activeCategory = 'all';
+let activeScope = 'all';
 
 function setSideClasses(items) {
   let idx = 0;
@@ -52,24 +57,40 @@ function setSideClasses(items) {
   });
 }
 
-function applyFilter(filter) {
+function itemMatchesCategory(item, category) {
+  if (category === 'all') return true;
+  const tagClasses = filterMap[category] || [];
+  return tagClasses.some(tc => item.querySelector('.tag.' + tc));
+}
+
+function itemMatchesScope(item, scope) {
+  if (scope === 'all') return true;
+  return item.querySelector('.tag.tag-' + scope);
+}
+
+function applyFilter() {
   // Update button states
   filterBtns.forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.filter === filter);
+    btn.classList.toggle('active', btn.dataset.filter === activeCategory);
   });
+
+  // Update scope toggle visual
+  if (scopeToggle) {
+    scopeToggle.dataset.scope = activeScope;
+    const labels = { all: '◎', personal: 'P', school: 'S' };
+    scopeToggle.textContent = labels[activeScope];
+    scopeToggle.title = 'Scope: ' + activeScope.charAt(0).toUpperCase() + activeScope.slice(1);
+  }
 
   // Show/hide items
   const allItems = document.querySelectorAll('.timeline-item');
   allItems.forEach(item => {
-    if (filter === 'all') {
-      item.style.display = '';
-      item.classList.add('visible');
-    } else {
-      const tagClasses = filterMap[filter] || [];
-      const hasTag = tagClasses.some(tc => item.querySelector('.tag.' + tc));
-      item.style.display = hasTag ? '' : 'none';
-      if (hasTag) item.classList.add('visible');
-    }
+    const categoryMatch = itemMatchesCategory(item, activeCategory);
+    const scopeMatch = itemMatchesScope(item, activeScope);
+    const visible = categoryMatch && scopeMatch;
+
+    item.style.display = visible ? '' : 'none';
+    if (visible) item.classList.add('visible');
   });
 
   // Re-assign left/right based on VISIBLE items only
@@ -78,11 +99,6 @@ function applyFilter(filter) {
 
   // Show/hide months (only if they have visible items after them)
   timelineMonths.forEach(month => {
-    if (filter === 'all') {
-      month.style.display = '';
-      month.classList.add('visible');
-      return;
-    }
     let hasVisible = false;
     let el = month.nextElementSibling;
     while (el && !el.classList.contains('timeline-month') && !el.classList.contains('timeline-year')) {
@@ -93,15 +109,11 @@ function applyFilter(filter) {
       el = el.nextElementSibling;
     }
     month.style.display = hasVisible ? '' : 'none';
+    if (hasVisible) month.classList.add('visible');
   });
 
   // Show/hide years (only if they have visible items)
   timelineYears.forEach(year => {
-    if (filter === 'all') {
-      year.style.display = '';
-      year.classList.add('visible');
-      return;
-    }
     let hasVisible = false;
     let el = year.nextElementSibling;
     while (el && !el.classList.contains('timeline-year')) {
@@ -112,14 +124,25 @@ function applyFilter(filter) {
       el = el.nextElementSibling;
     }
     year.style.display = hasVisible ? '' : 'none';
+    if (hasVisible) year.classList.add('visible');
   });
 }
 
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    applyFilter(btn.dataset.filter);
+    activeCategory = btn.dataset.filter;
+    applyFilter();
   });
 });
+
+if (scopeToggle) {
+  scopeToggle.addEventListener('click', () => {
+    const cycle = ['all', 'personal', 'school'];
+    const idx = cycle.indexOf(activeScope);
+    activeScope = cycle[(idx + 1) % cycle.length];
+    applyFilter();
+  });
+}
 
 /* ── Scroll-to-top button ── */
 const topBtn = document.getElementById('back-to-top');

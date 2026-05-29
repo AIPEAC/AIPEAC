@@ -22,6 +22,7 @@
   /* ── Language colors from GitHub Linguist ── */
   --python:   #167dd8;
   --dart:     #00B4AB;
+  --rust:     #dea584;
 
   --prolog:   #f10745;
 
@@ -98,6 +99,44 @@ body {
   box-shadow: 0 0 12px var(--accent)44;
 }
 
+/* ── Scope toggle (ternary: all / personal / school) ── */
+.scope-toggle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  letter-spacing: 0;
+  min-width: 36px;
+  line-height: 1;
+}
+.scope-toggle:hover {
+  border-color: var(--accent);
+  color: var(--text);
+  box-shadow: 0 0 0 1px var(--accent)22;
+}
+.scope-toggle[data-scope="personal"] {
+  border-color: #a371f7;
+  color: #a371f7;
+  background: rgba(163, 113, 247, 0.1);
+  box-shadow: 0 0 12px rgba(163, 113, 247, 0.2);
+}
+.scope-toggle[data-scope="school"] {
+  border-color: #3fb950;
+  color: #3fb950;
+  background: rgba(63, 185, 80, 0.1);
+  box-shadow: 0 0 12px rgba(63, 185, 80, 0.2);
+}
+
 /* ── Timeline wrapper ── */
 .timeline {
   position: relative;
@@ -142,8 +181,9 @@ body {
   Use  class="timeline-item left"   →  content on the LEFT side
 
   Change the dot colour with  style="--dot: #yourcolor"
-  Pick a tag class: .tag-current  .tag-ai  .tag-web
+  Pick a tag class: .tag-current  .tag-ai  .tag-web  .tag-ongoing
                     .tag-security .tag-mobile .tag-systems .tag-docs
+                    .tag-personal .tag-school
 */
 .timeline-item {
   position: relative;
@@ -218,7 +258,9 @@ body {
   padding: 2px 9px;
   border-radius: 20px;
   margin-bottom: 9px;
+  margin-right: 4px;
 }
+.tag:last-child { margin-right: 0; }
 .tag-current  { background: rgba(53,114,165,.18);  color: var(--python);  }
 .tag-ai       { background: rgba(44, 113, 171, 0.397); color: var(--python); }
 .tag-web      { background: rgba(241,224,90,.18); color: var(--javascript); }
@@ -226,9 +268,14 @@ body {
 .tag-systems  { background: rgba(176,114,25,.15); color: var(--java); }
 .tag-symolicai{ background: rgba(85, 40, 40, 0.956);  color: var(--prolog); }
 .tag-scripts   { background: rgba(137,224,81,.15);  color: var(--bash);   }
+.tag-sql       { background: rgba(255,157,0,.15);  color: var(--sql);    }
+
 /* special tags */
 .tag-docs     { background: rgba(139,148,158,.15);color: var(--docs);  }
 .tag-security { background: rgba(14, 102, 209, 0.171); color: var(--security); }
+.tag-ongoing  { background: rgba(53,114,165,.18);  color: var(--python);  }
+.tag-personal { background: rgba(51, 56, 56, 0.655); color: var(--muted); }
+.tag-school   { background: rgba(51, 56, 56, 0.655);  color: var(--muted); }
 
 .timeline-content h3 {
   font-size: 0.95rem;
