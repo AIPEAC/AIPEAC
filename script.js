@@ -38,10 +38,11 @@ const scopeToggle = document.querySelector('.scope-toggle');
 // Map filter value to tag classes that match
 const filterMap = {
   ai: ['tag-ai', 'tag-symolicai'],
-  flutter: ['tag-mobile'],
+  flutter: ['tag-crossplatform'],
   web: ['tag-web'],
   docs: ['tag-docs'],
-  other: ['tag-scripts', 'tag-security', 'tag-systems', 'tag-sql'],
+  other: ['tag-scripts', 'tag-security', 'tag-systems', 'tag-sql','tag-kotlin'],
+  // unique: ongoing
   ongoing: ['tag-ongoing', 'tag-current'],
 };
 

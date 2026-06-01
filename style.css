@@ -37,6 +37,8 @@
   --powershell: #0265c2;
   --sql:      #ff9d00;
   --tsql:     #ff9d00;
+
+  --kotlin:   #a371f7;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -264,7 +266,10 @@ body {
 .tag-current  { background: rgba(53,114,165,.18);  color: var(--python);  }
 .tag-ai       { background: rgba(44, 113, 171, 0.397); color: var(--python); }
 .tag-web      { background: rgba(241,224,90,.18); color: var(--javascript); }
-.tag-mobile   { background: rgba(0,180,171,.15);  color: var(--dart);   }
+
+.tag-mobile   { background: rgba(0,180,171,.15);  color: var(--kotlin);   }
+.tag-crossplatform { background: rgba(0,180,171,.15);  color: var(--dart);   }
+
 .tag-systems  { background: rgba(176,114,25,.15); color: var(--java); }
 .tag-symolicai{ background: rgba(85, 40, 40, 0.956);  color: var(--prolog); }
 .tag-scripts   { background: rgba(137,224,81,.15);  color: var(--bash);   }
