@@ -48,12 +48,13 @@ const filterMap = {
 
 let activeCategory = 'all';
 let activeScope = 'all';
+let startRecord = 0;
 
-function setSideClasses(items) {
-  let idx = 0;
+function setSideClasses(items, randomStartReassigned = 0) {
+  let idx = randomStartReassigned; // Start from a random side to add some variety when filtering, but keep the original left/right as much as possible for "all"
   items.forEach(item => {
     item.classList.remove('left', 'right');
-    item.classList.add(idx % 2 === 0 ? 'right' : 'left');
+    item.classList.add( idx % 2 === 0 ? 'right' : 'left');
     idx++;
   });
 }
@@ -69,7 +70,21 @@ function itemMatchesScope(item, scope) {
   return item.querySelector('.tag.tag-' + scope);
 }
 
-function applyFilter() {
+function applyFilter(changedType) {
+  let randomStartReassigned;
+
+  if (activeCategory === 'all') {
+    // Always right first for "all" category, regardless of scope
+    randomStartReassigned = 0;
+  } else if (changedType === 'category') {
+    // New non-"all" category selected — randomize layout
+    startRecord = Math.floor(Math.random() * 2);
+    randomStartReassigned = startRecord;
+  } else {
+    // Only scope changed — preserve current layout
+    randomStartReassigned = startRecord;
+  }
+
   // Update button states
   filterBtns.forEach(btn => {
     btn.classList.toggle('active', btn.dataset.filter === activeCategory);
@@ -94,9 +109,8 @@ function applyFilter() {
     if (visible) item.classList.add('visible');
   });
 
-  // Re-assign left/right based on VISIBLE items only
   const visibleItems = document.querySelectorAll('.timeline-item:not([style*="display: none"])');
-  setSideClasses(visibleItems);
+  setSideClasses(visibleItems, randomStartReassigned);
 
   // Show/hide months (only if they have visible items after them)
   timelineMonths.forEach(month => {
@@ -127,12 +141,14 @@ function applyFilter() {
     year.style.display = hasVisible ? '' : 'none';
     if (hasVisible) year.classList.add('visible');
   });
+
+  return startRecord;
 }
 
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     activeCategory = btn.dataset.filter;
-    applyFilter();
+    startRecord = applyFilter('category');
   });
 });
 
@@ -141,7 +157,7 @@ if (scopeToggle) {
     const cycle = ['all', 'personal', 'school'];
     const idx = cycle.indexOf(activeScope);
     activeScope = cycle[(idx + 1) % cycle.length];
-    applyFilter();
+    startRecord = applyFilter('scope');
   });
 }
 
