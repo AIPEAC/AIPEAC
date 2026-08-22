@@ -41,7 +41,7 @@ const filterMap = {
   flutter: ['tag-crossplatform'],
   web: ['tag-web'],
   docs: ['tag-docs'],
-  other: ['tag-scripts', 'tag-security', 'tag-systems', 'tag-sql','tag-kotlin'],
+  other: ['tag-scripts', 'tag-security', 'tag-systems', 'tag-sql','tag-kotlin','tag-backend'],
   // unique: ongoing
   ongoing: ['tag-ongoing', 'tag-current'],
 };

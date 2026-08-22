@@ -31,6 +31,7 @@
   --html:     #e34c26;
   --css:      #663399;
   --java:     #d49a12;
+  --go:       #00ADD8;
 
   --cpp:      #f34b7d;
   --bash:     #89e051;
@@ -269,6 +270,7 @@ body {
 
 .tag-mobile   { background: rgba(0,180,171,.15);  color: var(--kotlin);   }
 .tag-crossplatform { background: rgba(0,180,171,.15);  color: var(--dart);   }
+.tag-backend   { background: rgba(0,173,216,.15);  color: var(--go);  }
 
 .tag-systems  { background: rgba(176,114,25,.15); color: var(--java); }
 .tag-symolicai{ background: rgba(85, 40, 40, 0.956);  color: var(--prolog); }
