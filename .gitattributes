@@ -17,5 +17,6 @@
 *.html linguist-detectable=false
 *.css linguist-detectable=false
 *.js linguist-detectable=false
+*.py linguist-detectable=false
 
 .vendor/** linguist-detectable=false
