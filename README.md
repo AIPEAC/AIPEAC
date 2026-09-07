@@ -20,10 +20,10 @@ I’m Allen, an AI-focused developer. I am also interested in building applicati
       <br/>
       <!-- top-langs:start -->
 <table align="left">
-<tr><td height="40">Dart 48.9%</td><td height="40">CMake 3.8%</td></tr>
-<tr><td height="40">Java 25.3%</td><td height="40">JavaScript 2.6%</td></tr>
-<tr><td height="40">Python 11.0%</td><td height="40">Prolog 1.8%</td></tr>
-<tr><td height="40">C++ 5.0%</td><td height="40">HTML 1.7%</td></tr>
+<tr><td height="40">Dart 49.5%</td><td height="40">CMake 3.7%</td></tr>
+<tr><td height="40">Java 25.2%</td><td height="40">JavaScript 2.6%</td></tr>
+<tr><td height="40">Python 10.6%</td><td height="40">Prolog 1.8%</td></tr>
+<tr><td height="40">C++ 4.9%</td><td height="40">HTML 1.7%</td></tr>
 </table>
 <!-- top-langs:end -->
     </td>
