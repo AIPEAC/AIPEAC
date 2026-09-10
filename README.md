@@ -8,7 +8,7 @@ I’m Allen, an AI-focused developer. I am also interested in building applicati
   <tr>
     <td valign="top">
       <table>
-        <tr><td><b>Core Development</b></td><td><a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=pytorch,flutter,rust" height="40"/></a></td></tr>
+        <tr><td><b>Core Development</b></td><td><a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=pytorch,flutter" height="40"/></a></td></tr>
         <tr><td><b>Cloud, DevOps &amp; Databases </b></td><td><a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=docker,podman,uv,gcp,azure,sqlserver" height="40"/></a></td></tr>
         <tr><td><b>System &amp; Tools</b></td><td><a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=debian,puppylinux,neovim,vscode,photoshop" height="40"/></a></td></tr>
         <tr><td><b>Other Languages</b></td><td><a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=latex,bash,powershell,sqlite" height="40"/></a></td></tr>
