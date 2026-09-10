@@ -1,6 +1,6 @@
 ## Hi there 👋
 
-I’m Allen. I am interested in building applications using Flutter as well as some math projects. I also like to use LibTorch to do some AI experiments 
+I’m Allen. I am interested in building applications using Flutter as well as some math projects. I also like to use LibTorch to do some AI experiments.
 
 ## 📖 My Languages and Tools
 
