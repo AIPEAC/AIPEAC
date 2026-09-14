@@ -20,9 +20,9 @@ I’m Allen. I am interested in building applications using Flutter as well as s
       <br/>
       <!-- top-langs:start -->
 <table align="left">
-<tr><td height="40">Dart 47.0%</td><td height="40">JavaScript 2.9%</td></tr>
-<tr><td height="40">Java 28.1%</td><td height="40">CMake 2.8%</td></tr>
-<tr><td height="40">Python 11.8%</td><td height="40">Prolog 2.0%</td></tr>
+<tr><td height="40">Dart 47.6%</td><td height="40">JavaScript 2.9%</td></tr>
+<tr><td height="40">Java 27.8%</td><td height="40">CMake 2.8%</td></tr>
+<tr><td height="40">Python 11.7%</td><td height="40">Prolog 1.9%</td></tr>
 <tr><td height="40">C++ 3.6%</td><td height="40">HTML 1.9%</td></tr>
 </table>
 <!-- top-langs:end -->
