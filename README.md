@@ -9,9 +9,9 @@ I’m Allen. I am interested in building applications using Flutter as well as s
     <td valign="top">
       <table>
         <tr><td><b>Core Development</b></td><td><a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=pytorch,flutter" height="40"/></a></td></tr>
-        <tr><td><b>Cloud, DevOps &amp; Databases </b></td><td><a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=docker,podman,uv,gcp,azure,sqlserver" height="40"/></a></td></tr>
+        <tr><td><b>Cloud, DevOps &amp; Databases </b></td><td><a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=docker,podman,uv,gcp,azure,sqlserver,sqlite" height="40"/></a></td></tr>
         <tr><td><b>System &amp; Tools</b></td><td><a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=debian,puppylinux,neovim,vscode,photoshop" height="40"/></a></td></tr>
-        <tr><td><b>Other Languages</b></td><td><a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=latex,bash,powershell,sqlite" height="40"/></a></td></tr>
+        <tr><td><b>Other Languages</b></td><td><a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=latex,bash,powershell,gleam" height="40"/></a></td></tr>
       </table>
     </td>
     <td valign="top">
