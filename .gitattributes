@@ -8,12 +8,6 @@
 *.gitattributes  linguist-vendored=false
 *.gitattributes  linguist-generated=false
 
-*.gitmodules linguist-detectable=true
-*.gitmodules linguist-documentation=false
-*.gitmodules  linguist-vendored=false
-*.gitmodules  linguist-generated=false
-
-
 *.html linguist-detectable=false
 *.css linguist-detectable=false
 *.js linguist-detectable=false
