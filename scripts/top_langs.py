@@ -19,7 +19,18 @@ import urllib.request
 from collections import Counter
 
 OWNERS = ["AIPEAC", "AIPEACM", "AIPEACMS", "AIPEACS"]
-LANG_COUNT = 8
+LANG_COUNT = 7
+# Add GitHub language names here to leave them out of both the top languages
+# and the OTHERS total.
+EXCLUDED_LANGUAGES = [
+    "Markdown",
+    "HTML",
+    "CSS",
+    "Jupyter Notebook",
+    "CMake",
+    "PowerShell",
+    "Batchfile",
+]
 BAR_WIDTH = 300
 BAR_HEIGHT = 10
 BAR_RADIUS = 5
@@ -30,15 +41,23 @@ MARKER_END = "<!-- top-langs:end -->"
 
 # GitHub language colors (github/linguist colors.json); fallback for unknown.
 LANG_COLORS = {
+    "Batchfile": "#C1F12E",
     "C": "#555555",
     "C++": "#f34b7d",
     "CMake": "#DA3434",
+    "C#": "#178600",
     "CSS": "#663399",
     "Dart": "#00B4AB",
+    "Go": "#00ADD8",
+    "Gleam": "#ffaff3",
     "HTML": "#e34c26",
     "Java": "#b07219",
     "JavaScript": "#f1e05a",
+    "Jupyter Notebook": "#DA5B0B",
+    "Kotlin": "#A97BFF",
+    "Lean": "#000000",
     "Markdown": "#083fa1",
+    "Nix": "#7e7eff",
     "PowerShell": "#012456",
     "Prolog": "#74283c",
     "Python": "#3572A5",
@@ -50,6 +69,11 @@ LANG_COLORS = {
     "Vue": "#41b883",
 }
 FALLBACK_COLOR = "#8b949e"
+OTHERS_COLOR = "#ffffff"
+LANG_LABELS = {
+    "Batchfile": "Batch",
+    "Lean": "Lean (Lean 4)",
+}
 
 API = "https://api.github.com"
 
@@ -91,6 +115,29 @@ def aggregate(owners):
             for lang, size in langs.items():
                 counts[lang] += size
     return counts
+
+
+def build_items(counts):
+    """Return the top languages followed by one aggregate OTHERS item."""
+    filtered = Counter({
+        lang: size for lang, size in counts.items()
+        if lang not in EXCLUDED_LANGUAGES
+    })
+    total = sum(filtered.values())
+    if not total:
+        return []
+
+    top = filtered.most_common(LANG_COUNT)
+    top_total = sum(size for _, size in top)
+    items = [
+        (LANG_LABELS.get(lang, lang), size / total,
+         LANG_COLORS.get(lang, FALLBACK_COLOR))
+        for lang, size in top
+    ]
+    others = total - top_total
+    if others:
+        items.append(("OTHERS", others / total, OTHERS_COLOR))
+    return items
 
 
 def render_bar_svg(items):
@@ -170,10 +217,7 @@ def main():
     if not counts:
         print("error: no language data fetched", file=sys.stderr)
         return 1
-    top = counts.most_common(LANG_COUNT)
-    total = sum(size for _, size in top)
-    items = [(lang, size / total, LANG_COLORS.get(lang, FALLBACK_COLOR))
-             for lang, size in top]
+    items = build_items(counts)
 
     os.makedirs(os.path.dirname(SVG_PATH), exist_ok=True)
     with open(SVG_PATH, "w", encoding="utf-8") as f:
