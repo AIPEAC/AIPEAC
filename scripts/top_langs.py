@@ -136,7 +136,7 @@ def build_items(counts):
     ]
     others = total - top_total
     if others:
-        items.append(("OTHERS", others / total, OTHERS_COLOR))
+        items.append(("Others", others / total, OTHERS_COLOR))
     return items
 
 
