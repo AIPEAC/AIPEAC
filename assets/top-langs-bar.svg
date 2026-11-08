@@ -12,12 +12,12 @@
   <mask id="rect-mask">
     <rect x="0" y="0" width="300" height="10" fill="white" rx="5"/>
   </mask>
-        <rect mask="url(#rect-mask)" x="0" y="0" width="149.06" height="10" fill="#00B4AB" />
-        <rect mask="url(#rect-mask)" x="149.06" y="0" width="85.39" height="10" fill="#b07219" />
-        <rect mask="url(#rect-mask)" x="234.45" y="0" width="35.86" height="10" fill="#3572A5" />
-        <rect mask="url(#rect-mask)" x="270.31" y="0" width="8.87" height="10" fill="#f1e05a" />
-        <rect mask="url(#rect-mask)" x="279.18" y="0" width="5.97" height="10" fill="#74283c" />
-        <rect mask="url(#rect-mask)" x="285.15" y="0" width="5.24" height="10" fill="#dea584" />
-        <rect mask="url(#rect-mask)" x="290.39" y="0" width="4.34" height="10" fill="#e38c00" />
-        <rect mask="url(#rect-mask)" x="294.73" y="0" width="5.27" height="10" fill="#ffffff" />
+        <rect mask="url(#rect-mask)" x="0" y="0" width="92.1" height="10" fill="#f34b7d" />
+        <rect mask="url(#rect-mask)" x="92.1" y="0" width="76.51" height="10" fill="#dea584" />
+        <rect mask="url(#rect-mask)" x="168.61" y="0" width="71.6" height="10" fill="#00B4AB" />
+        <rect mask="url(#rect-mask)" x="240.21" y="0" width="18.64" height="10" fill="#b07219" />
+        <rect mask="url(#rect-mask)" x="258.85" y="0" width="17.3" height="10" fill="#ffaff3" />
+        <rect mask="url(#rect-mask)" x="276.15" y="0" width="7.98" height="10" fill="#3572A5" />
+        <rect mask="url(#rect-mask)" x="284.13" y="0" width="5.32" height="10" fill="#555555" />
+        <rect mask="url(#rect-mask)" x="289.45" y="0" width="10.55" height="10" fill="#ffffff" />
 </svg>

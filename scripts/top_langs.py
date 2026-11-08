@@ -9,7 +9,10 @@ AIPEACM / AIPEACMS / AIPEACS organizations (forks excluded), then writes:
                                <!-- top-langs:start --> / <!-- top-langs:end -->
                                markers (inserted at end of file if missing)
 
-Public data only; uses GITHUB_TOKEN when present to raise rate limits.
+Additional owners (e.g. a private organization) can be appended through the
+EXTRA_OWNERS env var (comma or space separated) so that their names never
+appear in this public repository. GITHUB_TOKEN, when present, is used for the
+API calls; a read-only token that can see those private repos is enough.
 """
 
 import json
@@ -18,8 +21,10 @@ import sys
 import urllib.request
 from collections import Counter
 
-OWNERS = ["AIPEAC", "AIPEACM", "AIPEACMS", "AIPEACS"]
+OWNERS = ["AIPEAC", "AIPEACM", "AIPEACMS", "AIPEACS",]
 LANG_COUNT = 7
+# Owners kept out of this file on purpose (private organizations) come in here.
+EXTRA_OWNERS_ENV = "EXTRA_OWNERS"
 # Add GitHub language names here to leave them out of both the top languages
 # and the OTHERS total.
 EXCLUDED_LANGUAGES = [
@@ -105,6 +110,20 @@ def list_repos(owner: str):
             break
         page += 1
     return [r for r in repos if not r.get("fork")]
+
+
+def extra_owners():
+    """Organizations from EXTRA_OWNERS (comma or space separated).
+
+    Blanks and owners already counted are dropped; matching is
+    case-insensitive because GitHub owner names are."""
+    seen = {owner.lower() for owner in OWNERS}
+    extra = []
+    for owner in os.environ.get(EXTRA_OWNERS_ENV, "").replace(",", " ").split():
+        if owner.lower() not in seen:
+            seen.add(owner.lower())
+            extra.append(owner)
+    return extra
 
 
 def aggregate(owners):
@@ -213,7 +232,7 @@ def update_readme(legend: str):
 
 
 def main():
-    counts = aggregate(OWNERS)
+    counts = aggregate(OWNERS + extra_owners())
     if not counts:
         print("error: no language data fetched", file=sys.stderr)
         return 1

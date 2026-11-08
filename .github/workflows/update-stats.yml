@@ -5,6 +5,9 @@
 # the AIPEACM / AIPEACMS / AIPEACS organizations (forks excluded),
 # then commits the segmented bar SVG and the README legend.
 #
+# Optional: organizations named by the EXTRA_OWNERS secret are counted too,
+# using the read-only LANG_STATS_TOKEN secret.
+#
 # Schedule: Weekly (Monday 03:00 UTC) and on manual dispatch.
 # Output:   assets/top-langs-bar.svg + README.md legend section.
 # ---------------------------------------------------------------
@@ -30,7 +33,15 @@ jobs:
       - name: Generate top languages bar
         run: python3 scripts/top_langs.py
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Read-only token that also sees the private organization(s).
+          # Fine-grained PAT: repository access "Public repositories
+          # (read-only)" plus the private org, and no permission ticked --
+          # Metadata read is implicit and is all these calls need.
+          # Falls back to the built-in token, i.e. public data only.
+          GITHUB_TOKEN: ${{ secrets.LANG_STATS_TOKEN || secrets.GITHUB_TOKEN }}
+          # Extra owners to count. Held as a secret so a private organization
+          # name never appears in this public repository.
+          EXTRA_OWNERS: ${{ secrets.EXTRA_OWNERS }}
 
       - name: Commit and push if changed
         run: |

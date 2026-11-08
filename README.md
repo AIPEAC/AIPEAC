@@ -9,9 +9,9 @@ I’m Allen. I am interested in building applications using Flutter as well as u
     <td valign="top">
       <table>
         <tr><td><b>Core Development</b></td><td><a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=pytorch,flutter" height="40"/></a></td></tr>
-        <tr><td><b>Cloud, DevOps &amp; Databases </b></td><td><a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=docker,podman,uv,gcp,azure,sqlserver,sqlite" height="40"/></a></td></tr>
-        <tr><td><b>System &amp; Tools</b></td><td><a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=debian,puppylinux,neovim,vscode,photoshop" height="40"/></a></td></tr>
-        <tr><td><b>Other Languages</b></td><td><a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=rust,gleam,amber,lean" height="40"/></a></td></tr>
+        <tr><td><b>Cloud, DevOps &amp; Databases </b></td><td><a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=docker,podman,uv,gcp,azure,sqlserver" height="40"/></a></td></tr>
+        <tr><td><b>System &amp; Tools</b></td><td><a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=debian,neovim,vscode,photoshop" height="40"/></a></td></tr>
+        <tr><td><b>Other Languages</b></td><td><a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=gleam,amber,lean" height="40"/></a></td></tr>
       </table>
     </td>
     <td valign="top">
@@ -20,10 +20,10 @@ I’m Allen. I am interested in building applications using Flutter as well as u
       <br/>
       <!-- top-langs:start -->
 <table align="left">
-<tr><td height="40">Dart 49.7%</td><td height="40">Prolog 2.0%</td></tr>
-<tr><td height="40">Java 28.5%</td><td height="40">Rust 1.7%</td></tr>
-<tr><td height="40">Python 12.0%</td><td height="40">TSQL 1.4%</td></tr>
-<tr><td height="40">JavaScript 3.0%</td><td height="40">Others 1.8%</td></tr>
+<tr><td height="40">C++ 30.7%</td><td height="40">Gleam 5.8%</td></tr>
+<tr><td height="40">Rust 25.5%</td><td height="40">Python 2.7%</td></tr>
+<tr><td height="40">Dart 23.9%</td><td height="40">C 1.8%</td></tr>
+<tr><td height="40">Java 6.2%</td><td height="40">Others 3.5%</td></tr>
 </table>
 <!-- top-langs:end -->
     </td>
