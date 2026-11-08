@@ -2,16 +2,16 @@
 
 I’m Allen. I am interested in building applications using Flutter as well as using LibTorch to do some AI experiments.
 
-## 📖 My Languages and Tools
+## 📖 My MAIN Languages and Tools
 
 <table>
   <tr>
     <td valign="top">
       <table>
-        <tr><td><b>Core Development</b></td><td><a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=pytorch,flutter" height="40"/></a></td></tr>
+        <tr><td><b>Core Development</b></td><td><a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=pytorch,flutter,rust" height="40"/></a></td></tr>
         <tr><td><b>Cloud, DevOps &amp; Databases </b></td><td><a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=docker,podman,uv,gcp,sqlserver" height="40"/></a></td></tr>
-        <tr><td><b>System &amp; Tools</b></td><td><a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=debian,neovim,vscode,photoshop" height="40"/></a></td></tr>
-        <tr><td><b>Other Languages</b></td><td><a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=gleam,amber,lean" height="40"/></a></td></tr>
+        <tr><td><b>System &amp; Tools</b></td><td><a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=debian,puppylinux,neovim,photoshop" height="40"/></a></td></tr>
+        <tr><td><b>Other Languages</b></td><td><a href="https://skills.syvixor.com"><img src="https://skills.syvixor.com/api/icons?perline=15&i=gleam,amber" height="40"/></a></td></tr>
       </table>
     </td>
     <td valign="top">
