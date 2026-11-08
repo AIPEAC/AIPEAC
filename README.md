@@ -20,10 +20,10 @@ I’m Allen. I am interested in building applications using Flutter as well as u
       <br/>
       <!-- top-langs:start -->
 <table align="left">
-<tr><td height="40">C++ 30.7%</td><td height="40">Gleam 5.8%</td></tr>
-<tr><td height="40">Rust 25.5%</td><td height="40">Python 2.7%</td></tr>
-<tr><td height="40">Dart 23.9%</td><td height="40">C 1.8%</td></tr>
-<tr><td height="40">Java 6.2%</td><td height="40">Others 3.5%</td></tr>
+<tr><td height="40">Rust 37.2%</td><td height="40">Python 4.1%</td></tr>
+<tr><td height="40">Dart 28.9%</td><td height="40">C++ 4.1%</td></tr>
+<tr><td height="40">Java 9.8%</td><td height="40">C 2.2%</td></tr>
+<tr><td height="40">Gleam 9.1%</td><td height="40">Others 4.4%</td></tr>
 </table>
 <!-- top-langs:end -->
     </td>
